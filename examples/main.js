@@ -2,13 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 
 // 本地开发
-import "../components/css/card.scss";
-import "../components/css/demo.scss";
-import { Demo, Card } from "../components/lib/index";
-// import Card from "../components/lib/card/index";
+import "../components/css/index.scss";
 
-Vue.use(Demo);
-Vue.use(Card);
+import BeyondUI from "../components/lib/index";
+
+Vue.use(BeyondUI);
 
 // 生产 npm 组件库，全部引用
 

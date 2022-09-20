@@ -4,7 +4,9 @@
 
 ### 示例
 
-<m-card imgSrc="/moocUI/logo.png" summary="Vue" />
+<ClientOnly>
+  <m-card-demo>  </m-card-demo/>
+</ClientOnly>
 
 ### 代码
 

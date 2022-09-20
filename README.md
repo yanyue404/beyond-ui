@@ -21,3 +21,9 @@ import "beyond-ui/dist/css/demo.css";
 import { Demo } from "beyond-ui";
 Vue.use(Demo);
 ```
+
+## 参考
+
+- https://github.com/Zack921/moocUI
+- https://github.com/FrankFang/gulu
+- https://github.com/shervinchen/tiny-wheels
