@@ -1,6 +1,5 @@
 module.exports = {
   base: "/beyond-ui/",
-  dest: "./docs/dist",
   title: "Tk UI",
   description: "更快更简单!",
   themeConfig: {
