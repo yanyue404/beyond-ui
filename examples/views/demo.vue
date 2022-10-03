@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Demo>Tk-UI</Demo>
+    <Demo>Beyond-UI</Demo>
     <ul>
       <li>
         <router-link to="/banner">Banner</router-link>

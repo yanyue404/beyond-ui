@@ -3,7 +3,7 @@
 ### 代码
 
 ```html
-<TkSegment
+<Segment
   ref="segment"
   :list="tabList"
   @active="onTabActive"
@@ -16,7 +16,7 @@
     :slot="tab.slot"
     :ref="tab.slot"
   ></component>
-</TkSegment>
+</Segment>
 ```
 
 ## API

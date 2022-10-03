@@ -1,6 +1,6 @@
 module.exports = {
   base: "/beyond-ui/",
-  title: "Tk UI",
+  title: "Beyond UI",
   description: "更快更简单!",
   themeConfig: {
     // 假如文档不是放在仓库的根目录下：
