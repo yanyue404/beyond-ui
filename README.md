@@ -1,4 +1,4 @@
-# Beyond-ui
+# beyond-ui
 
 ## 快速开始
 
@@ -12,18 +12,20 @@ npm i beyond-ui
 
 ```javascript
 // 全部引入
-import "beyond-ui/dist/css/index.css";
 import BeyondUI from "beyond-ui";
+import "beyond-ui/lib/style/index.css";
 Vue.use(BeyondUI);
 
 // 按需引用
-import "beyond-ui/dist/css/demo.css";
 import { Demo } from "beyond-ui";
+import "beyond-ui/lib/style/demo.css";
 Vue.use(Demo);
 ```
 
-## 参考
+### 参考
 
-- https://github.com/Zack921/moocUI
-- https://github.com/FrankFang/gulu
-- https://github.com/shervinchen/tiny-wheels
+- [any-ui](https://github.com/Atom-H/any-ui)
+- [moocUI](https://github.com/Zack921/moocUI)
+- [gulu](https://github.com/FrankFang/gulu)
+- [vant](https://github.com/youzan/vant)
+- [foxit-ui](https://github.com/foxitUi/foxit-ui)

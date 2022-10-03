@@ -1,12 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
+import componetsEntry from "@/index";
+import router from "./router";
 
 // 本地开发
-import "../components/css/index.scss";
-
-import BeyondUI from "../components/lib/index";
-
-Vue.use(BeyondUI);
+Vue.use(componetsEntry);
 
 // 生产 npm 组件库，全部引用
 
@@ -23,4 +21,5 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: (h) => h(App),
+  router,
 }).$mount("#app");
