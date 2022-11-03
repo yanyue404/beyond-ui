@@ -1,6 +1,4 @@
-# Beyond-UI
-
-> 在线访问， https://yanyue404.github.io/beyond-ui/
+# 介绍
 
 ### 关于
 
