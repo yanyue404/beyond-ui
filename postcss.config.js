@@ -7,7 +7,7 @@ module.exports = {
       propList: ['*'],
       rootValue({ file }) {
         if (file && file.indexOf('src') !== -1) {
-          return 32;
+          return 33.33333;
         }
         return 16;
       },

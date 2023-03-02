@@ -101,6 +101,10 @@ module.exports = {
             path: 'rate-list',
             title: 'rate-list 费率表',
           },
+          {
+            path: 'steps',
+            title: 'steps 步骤条',
+          },
         ],
       },
     ],
