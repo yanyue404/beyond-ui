@@ -86,6 +86,10 @@ module.exports = {
             title: 'overlay 遮罩层',
           },
           {
+            path: 'popup',
+            title: 'popup 弹出层',
+          },
+          {
             path: 'banner',
             title: 'banner 轮播',
           },
@@ -104,6 +108,15 @@ module.exports = {
           {
             path: 'steps',
             title: 'steps 步骤条',
+          },
+        ],
+      },
+      {
+        title: '全局组件',
+        items: [
+          {
+            path: 'alert',
+            title: 'alert 提示',
           },
         ],
       },

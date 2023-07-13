@@ -62,5 +62,8 @@
   "browserslist": [
     "Android >= 4.0",
     "iOS >= 8"
-  ]
+  ],
+  "dependencies": {
+    "rainbow-shared": "^0.5.2"
+  }
 }

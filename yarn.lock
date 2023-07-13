@@ -10272,6 +10272,13 @@
   "resolved" "https://registry.npmmirror.com/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
+"rainbow-shared@^0.5.2":
+  "integrity" "sha512-cbjfzS15ZSoKMXH/gz4XXnE2lwDOcJZGGEqJJdZSPwOlgmAgscp8F62x8jqe8fbCKkkh+w3O/0Q8RDtFHvfzVA=="
+  "resolved" "https://registry.npmjs.org/rainbow-shared/-/rainbow-shared-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "rollup" "^2.70.0"
+
 "randombytes@^2.0.0", "randombytes@^2.0.1", "randombytes@^2.0.5", "randombytes@^2.1.0":
   "integrity" "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ=="
   "resolved" "https://registry.npmmirror.com/randombytes/-/randombytes-2.1.0.tgz"
@@ -10895,6 +10902,13 @@
   dependencies:
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
+
+"rollup@^2.70.0":
+  "integrity" "sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw=="
+  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.79.1.tgz"
+  "version" "2.79.1"
+  optionalDependencies:
+    "fsevents" "~2.3.2"
 
 "rsvp@^4.8.4":
   "integrity" "sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA=="

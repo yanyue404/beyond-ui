@@ -1,20 +1,4 @@
-export function isObject(value) {
-  const type = typeof value;
-  return value != null && (type == 'object' || type == 'function');
-}
 
-export function isEmpty(value) {
-  if (isObject(value)) {
-    if (value == null) {
-      return true;
-    }
-    if (Array.isArray(value)) {
-      return !value.length;
-    }
-    return Object.keys(value).length === 0;
-  }
-  return false;
-}
 
 /**
  * 按指定精度格式化小数
