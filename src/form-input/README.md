@@ -8,7 +8,7 @@ FormInput 是一个表单输入框组件
 
 ```js
 import Vue from 'vue';
-import { FormInput } from 'Beyond-UI';
+import { FormInput } from 'beyond-ui';
 
 Vue.use(FormInput);
 ```

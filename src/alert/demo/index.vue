@@ -9,20 +9,15 @@
   </demo-section>
 </template>
 <script>
-import Alert from '../alert.js';
-import Vue from 'vue';
 export default {
-  created() {
-    Vue.prototype.$Alert = Alert;
-  },
   methods: {
     handleOpen1() {
-      this.$Alert.info({
+      this.$alert.info({
         content: '我是提示信息 1',
       });
     },
     handleOpen2() {
-      this.$Alert.info({
+      this.$alert.info({
         content: '我是提示信息 2',
         duration: 3,
       });

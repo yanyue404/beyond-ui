@@ -8,7 +8,7 @@ FormSwitch 是一个表单开关组件
 
 ```js
 import Vue from 'vue';
-import { FormSwitch } from 'Beyond-UI';
+import { FormSwitch } from 'beyond-ui';
 
 Vue.use(FormSwitch);
 ```

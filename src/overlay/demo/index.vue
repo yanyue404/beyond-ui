@@ -1,12 +1,12 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <demo-button @click="show = true">打开遮罩层</demo-button>
-      <overlay :show="show" @click="show = false">
+      <i-button @click="show = true">打开遮罩层</i-button>
+      <Overlay :show="show" @click="show = false">
         <div class="wrapper">
           <div class="block"></div>
         </div>
-      </overlay>
+      </Overlay>
     </demo-block>
   </demo-section>
 </template>

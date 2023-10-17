@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/name-property-casing -->
 <template>
   <div
     class="c-mask"
@@ -12,7 +13,8 @@
 import Mixin from './mixin';
 
 export default {
-  name: 'overlay',
+  // eslint-disable-next-line vue/name-property-casing
+  name: 'Overlay',
   mixins: [Mixin],
 };
 </script>

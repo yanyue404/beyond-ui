@@ -1,4 +1,4 @@
-import Alert from './index.vue';
+import Alert from './alert.vue';
 import Vue from 'vue';
 
 Alert.newInstance = (properties) => {

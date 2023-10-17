@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var twoSum = function (nums, target) {
+        var _result;
+        nums.some(function (item, index) {
+          var _index = nums.indexOf(target - item);
+          if (_index !== -1 && index !== _index) {
+            _result = [index, _index];
+            return true;
+          }
+        });
+        return _result;
+      };
+      //   const twoSum = function (nums, target) {
+      //     // Array.from 深拷贝一个新的排序后的数组
+      //     const arr = Array.from(nums).sort((a, b) => a - b);
+      //     let left = 0;
+      //     let right = arr.length - 1;
+      //     while (left < right) {
+      //       let mid = Math.floor((right + left) / 2);
+      //       if (arr[left] + arr[right] === target) {
+      //         break;
+      //         // 左半部分首尾和已经大于目标值，结果肯定在左半部分
+      //       } else if (arr[left] + arr[mid] > target) {
+      //         right = mid;
+      //         // 右半部分首尾和还是小于目标值，结果肯定在右半部分
+      //       } else if (arr[mid] + arr[right] < target) {
+      //         left = mid;
+      //       } else if (arr[left] + arr[right] < target) {
+      //         left++;
+      //       } else if (arr[left] + arr[right] > target) {
+      //         right--;
+      //       }
+      //     }
+      //     return [nums.indexOf(arr[left]), nums.lastIndexOf(arr[right])];
+      //   };
+
+      console.log(twoSum([3, 3], 6));
+    </script>
+  </body>
+</html>

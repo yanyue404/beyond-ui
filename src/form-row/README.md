@@ -8,7 +8,7 @@ FormRow 是一个表单行组件
 
 ```js
 import Vue from 'vue';
-import { FormRow } from 'Beyond-UI';
+import { FormRow } from 'beyond-ui';
 
 Vue.use(FormRow);
 ```

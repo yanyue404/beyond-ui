@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Beyond-UI',
+  name: 'beyond-ui',
   build: {
     css: {
       // CSS 预处理器配置
@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   site: {
-    title: 'Beyond-UI',
+    title: 'beyond-ui',
     logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
     nav: [
       {
@@ -48,8 +48,8 @@ module.exports = {
         title: '入门组件',
         items: [
           {
-            path: 'demo-button',
-            title: 'DemoButton 按钮',
+            path: 'button',
+            title: 'Button 按钮',
           },
         ],
       },
@@ -94,8 +94,8 @@ module.exports = {
             title: 'banner 轮播',
           },
           {
-            path: 'segment',
-            title: 'segment 锚点滚动tab',
+            path: 'tab-segment',
+            title: 'tab-segment 锚点滚动tab',
           },
           {
             path: 'drawer-layout',
@@ -116,7 +116,11 @@ module.exports = {
         items: [
           {
             path: 'alert',
-            title: 'alert 提示',
+            title: 'Alert 提示',
+          },
+          {
+            path: 'dialog',
+            title: 'Dialog 弹窗',
           },
         ],
       },

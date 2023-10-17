@@ -59,7 +59,9 @@ export default {
     &.active {
       color: #ff6600;
       box-shadow: inset 0 0 0 2px #ff6600;
-      // background: url('./img/active.png') right top no-repeat;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAS1BMVEUAAAD/ZQD/ZgD/ZwD/ZgD/ZwD/ZgD/ZgH/bw//eB7/ijz/k0z/lE3/nl7/qnP/rXf/soD/uYv/uo3/2cH/9/L/+/j/+/n//f3////G90O7AAAABnRSTlMAJn+t7vHInL8kAAAAcElEQVQoz33PSxaCMBAF0VKgQeIPNJr9r9RBaEBPP2t6R8XRorrmAMRm7R9riO3+GDpCm0o+GV/Wu7zOttBit2faxKnateS0ykrV5pKTy0Zub5cdubnsqdpltIB+/tCGNrShDW1oQxva0IY2tKENbR8XOwnggTv6twAAAABJRU5ErkJggg==);
+      background-position: right top;
+      background-repeat: no-repeat;
       background-size: 26px 26px;
     }
   }

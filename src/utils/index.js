@@ -1,4 +1,24 @@
+import Vue from 'vue';
 
+export const isServer = () => Vue.prototype.$isServer;
+
+export function isObject(value) {
+  const type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+export function isEmpty(value) {
+  if (isObject(value)) {
+    if (value == null) {
+      return true;
+    }
+    if (Array.isArray(value)) {
+      return !value.length;
+    }
+    return Object.keys(value).length === 0;
+  }
+  return false;
+}
 
 /**
  * 按指定精度格式化小数
@@ -50,43 +70,25 @@ export function throttle(fn, delay) {
   };
 }
 
-export function typeOf(obj) {
-  const toString = Object.prototype.toString;
-  const map = {
-    '[object Boolean]': 'boolean',
-    '[object Number]': 'number',
-    '[object String]': 'string',
-    '[object Function]': 'function',
-    '[object Array]': 'array',
-    '[object Date]': 'date',
-    '[object RegExp]': 'regExp',
-    '[object Undefined]': 'undefined',
-    '[object Null]': 'null',
-    '[object Object]': 'object',
-  };
-  return map[toString.call(obj)];
-}
-// deepCopy
-export function deepCopy(data) {
-  const t = typeOf(data);
-  let o;
-
-  if (t === 'array') {
-    o = [];
-  } else if (t === 'object') {
-    o = {};
-  } else {
-    return data;
+export function mount(component, opt, el) {
+  if (!component) {
+    console.warn('亲，请传入正确的组件');
   }
-
-  if (t === 'array') {
-    for (let i = 0; i < data.length; i++) {
-      o.push(deepCopy(data[i]));
-    }
-  } else if (t === 'object') {
-    for (let i in data) {
-      o[i] = deepCopy(data[i]);
-    }
+  if (!el) {
+    el = document.createElement('div');
+    document.body.appendChild(el);
   }
-  return o;
+  return new Vue({
+    el,
+    render(h) {
+      return h(component, opt);
+    },
+  });
 }
+
+export function destory(vm) {
+  vm.$el.remove();
+  vm.$destroy();
+}
+
+export function deepCopy() {}

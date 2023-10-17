@@ -12,7 +12,7 @@
           @click="showDialog(index)"
         >
           <span>{{ unite[index] | fieldName(item.fields) }}</span>
-          <!-- <img alt="" src="./img/rate_down.png" /> -->
+          <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAYAAADlep81AAABMElEQVRIS73VPU4DMRCG4XcU5QCUkJaIiiMgSMFVCCAa4BxAEyWcBYqEcAoELVByAIgGrXcTJdqsf1d2tdLK9qPP9ozoGYcId8APXa5lxBcZh16xxy8PwA7KreiQOcqRMQjvCAN55DOHqcLMUPrV/q8F6AnldAXIhNJzeijTFaYM5LkA9VFegN1cqFoy5cbfCMdSfOkFByyY5kA1YjoMZMKbAeVCuTDlqa2NxqS6nKS+Ph9MDWRNKgHli9kKahsVgmkEtYUKxVhBqagYjBMUi4rFeIFCUSkYb5Avams7KCpwVfR8+uNGHXJNsNUp/pBabwrEBCXkrOgmxqprL3tTQDLL9YMSsqI24w06pvWpUaDGO5WQTFJClqSik2kFZJK6ZJ8F92bBDjcy5sP1OGz//wFaq9d6+us+uQAAAABJRU5ErkJggg==" />
         </span>
         <div class="rate-dialog" v-if="isShowDialog">
           <span
@@ -21,11 +21,11 @@
             @click="onSelected(index)"
           >
             {{ item.name }}
-            <!-- <img
+            <img
               alt=""
               v-show="item.value == unite[checkingIndex]"
-              src="./img/rate_checked.png"
-            /> -->
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAqCAYAAADvczj0AAAEzUlEQVRoQ+WZW2wUZRSAv7Nbi+AFTPQBTHzRB40v+qSJYVsEgUSijZeCUQMS3Z1ytYokxqirD8Z7kKbtzoqaEESjVSMxoMGKij5AjGmMaRTwgoRWEQUkNGBxjpl/p6Slu/PP7G6oW/+Xptlz+b85/+Wc8wv/syHjlVdbuIAE0xhkl+QZHOIcd8C6mvM4wlqURQHkEYQV4rLe/39cAWuaSQhbUFIjVq7gIaQkx5fjBliXM4ETbAJml9im6yTPfeMCWLPU0cc7wE0lzyShS1xur3lgfYsk3WxEaQ49gBM4ksOtaWBVhAyvAQstt802pjFLsni1DZyhHWVJKKywk8nMkmc5WtOntGZ4DmWVJbI9JLleOjlU0/ewpnkSeNQS2V7qaZQ2fh8uV3NLWh1W4/GMJbJ7gJTk6T9drqaA1WEZHm0W2L0B7C/F5GoGWB0W47HOkh32BbA/lPooNQGsDgtQXkdJhCQWB1AaJM93YStgBLBJvA9zMdPYI1lO/hcqKU3ThPA2Sl3IfP4kyQzp5BvbnA2wZjmbPtYA6WDJ+BVGq7jmUh+zoQ5z8Ex+XB8S2b+AmeLyVZSJFoDTPA88WERhleR5IYqhastoCw14pvKZGGL7GAnm+FVQVP9DwP7FPKWokrBUXDqiGqyGnLZwLR5bUc4NsXecBDdKjk/i+BTNUk8/x0L2iH9U3Cs5Xo1juFxZdbgaz0AUD0DB8N8kaZJOtsT1U4hwhm0ojSH7xEO5W/JsjOsgjrwu5UoG+RS4MGQuJxGaJcd7cWwPyQ4t6csRdqCcH+oI5ovLu+U4sunoEi7jJJ8DU0M/PNwlLm/Y7JX6/dS1pA7X4fERcE6IsUGEJnHZXK7DYnqa5hJgO5i/pUZVttbIe9ihEWWz5WQ8jjBPXLqrAa1pE1Ef9lKLvWWSp71Sn6MyLU0zG2ETyoQQ4wMkmSudZqJlD13ORZzgM+CKUCPCQ+Kaq7PiUTS1VId5eGavnhXi4SgJZkmOneXMQu9nCgNsA66ywD4urikHqzJK5tLqcCvKm6EpnXDIFNgd9MSZTZDCbgWuseg9LXkejmPbJhtaPGiGO4ANoUk7HERoEJdemzP/d21lIgN8OKp3PFp5reRZGcVmHBlrtaQOi/BM0lFaVvjVlGUuu8OcR+gdF9SFl8mREUHjwESRtQKbqDhk8MhZ9tq+oLv/czE50zvupwvlZoudDUxlod9hjAIQVyYSsIHOsBI1FVXY+IkE0yXH/uFCmiVBv+kdz7fAdjGTBdLMP3FBospHBg4iHaWftIuJpOQlfjM6fu/Y4RWUeyywH6DcMvylLypEHLlYwEGkH0N5wjL5b6mjUdr5Q6P0juFjJjBP2jgRZ/LlyMYGDqCfQq3XxdfAF8AKy8fZjjJX8gyUAxBXpyxgA53mRaA1rsPT5HcwhRuGXgUqtBVJvWzgANpvDLRE8jRaqIdJzJA1HC5Tvyy1yoALj1l+63RxLO9Cb9BhPBhLrwrCFQGbKBeunPUod0aaj7CbJCnpMMnKGR8VAxvowhutn3ffZiHYSx3TpYN9Z5w0cFgV4GA/+5VVV8lXeGE/CVLSyY9jBev7rRpwsLz9huD7/jUzAko4EMB+P5awVQc+FekEj6DmVX4y0E2SB8ZyGQ//yP8Ch9ZkOizEgy8AAAAASUVORK5CYII="
+            />
           </span>
           <div
             class="triangle_border_up"
