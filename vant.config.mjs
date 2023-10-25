@@ -51,6 +51,40 @@ export default {
         ],
       },
       {
+        title: '表单组件',
+        items: [
+          {
+            path: 'form-row',
+            title: 'form-row 表单行',
+          },
+          {
+            path: 'form-input',
+            title: 'form-input 表单输入框',
+          },
+          {
+            path: 'form-switch',
+            title: 'form-switch 表单开关',
+          },
+          {
+            path: 'form-radio',
+            title: 'form-radio 单选',
+          },
+          // {
+          //   path: 'form-radio-group',
+          //   title: 'form-radio-group 单选包裹',
+          // },
+        ],
+      },
+      {
+        title: '业务组件',
+        items: [
+          {
+            path: 'overlay',
+            title: 'overlay 遮罩层',
+          },
+        ],
+      },
+      {
         title: '全局组件',
         items: [
           {
