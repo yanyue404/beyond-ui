@@ -1,9 +1,4 @@
-<template>
-  <div class="form-radio-group">
-    <slot></slot>
-  </div>
-</template>
-<script>
+<script lang="jsx">
 export default {
   name: 'form-radio-group',
   model: {
@@ -22,6 +17,10 @@ export default {
     setValue(val) {
       this.$emit('change', val);
     },
+  },
+  mounted() {},
+  render() {
+    return <div class="form-radio-group">{this.$slots.default()}</div>;
   },
 };
 </script>

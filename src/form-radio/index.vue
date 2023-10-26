@@ -1,9 +1,4 @@
-<template>
-  <div class="form-radio-group">
-    <slot></slot>
-  </div>
-</template>
-<script>
+<script lang="jsx">
 export default {
   name: 'form-radio',
   props: {
@@ -34,7 +29,7 @@ export default {
         onClick={this.onChoose}
         class={['c-form-radio', 'flex-c-c', checked ? this.activeClass : '']}
       >
-        {this.$scopedSlots.default(checked)}
+        {this.$slots.default()}
       </div>
     );
     // 使用this.$scopedSlots可以支持插槽作用域
