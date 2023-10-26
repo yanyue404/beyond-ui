@@ -1,7 +1,7 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <button @click="openDialog">展示 Dialog</button>
+      <i-button @click="openDialog">展示 Dialog</i-button>
       <Dialog
         v-model="dialogVisible"
         title="对话框标题"
@@ -12,8 +12,8 @@
     </demo-block>
 
     <demo-block title="全局方法 $dialog">
-      <button @click="onClickAlert">展示 Dialog</button>
-      <button @click="onClickAlert2">异步展示 Dialog</button>
+      <i-button @click="onClickAlert">展示 Dialog</i-button>
+      <i-button @click="onClickAlert2">异步展示 Dialog</i-button>
     </demo-block>
   </demo-section>
 </template>
@@ -63,37 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.appraise-banner {
-  width: 750px !important;
-  margin: 0 !important;
-  position: relative;
-  box-sizing: border-box;
-  overflow: inherit;
-  overflow-x: hidden;
-  padding: 0.28rem 0 0.3rem;
-  ::v-deep {
-    .c-banner-items {
-      width: 690px;
-    }
-    .c-banner-item {
-      width: 640px !important;
-      border-radius: 10px;
-      padding-right: 30px;
-      padding-left: 0;
-
-      div {
-        box-shadow: 0px 6px 12px 4px rgba(233, 233, 233, 0.5);
-        border-radius: 20px !important;
-      }
-
-      &:last-child {
-        padding-right: 0px;
-        width: 610px !important;
-      }
-      img {
-        height: auto;
-      }
-    }
-  }
+p {
+  font-size: 16px;
 }
 </style>

@@ -2,7 +2,9 @@
   <div class="alert">
     <transition-group tag="ul" name="fade">
       <div class="alert-main" v-for="item in notices" :key="item.name">
-        <div class="alert-content">{{ item.content }}</div>
+        <div :class="'alert-style--' + item.type" class="alert-content">
+          {{ item.content }}
+        </div>
       </div>
     </transition-group>
   </div>
@@ -23,24 +25,21 @@ export default {
   methods: {
     add(notice) {
       const name = getUuid();
-
-      let _notice = Object.assign(
-        {
-          name: name,
-        },
-        notice
-      );
+      const _notice = {
+        name,
+        ...notice,
+      };
 
       this.notices.push(_notice);
 
       // 定时移除，单位：秒
-      const duration = notice.duration;
+      const { duration } = notice;
       setTimeout(() => {
         this.remove(name);
       }, duration * 1000);
     },
     remove(name) {
-      const notices = this.notices;
+      const { notices } = this;
 
       for (let i = 0; i < notices.length; i++) {
         if (notices[i].name === name) {
@@ -52,7 +51,7 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="scss">
 .alert {
   position: fixed;
   width: 100%;
@@ -60,6 +59,24 @@ export default {
   left: 0;
   text-align: center;
   pointer-events: none;
+}
+.alert-style {
+  &--info {
+    background-color: #f4f4f5;
+    color: #909399;
+  }
+  &--success {
+    background-color: #f0f9eb;
+    color: #67c23a;
+  }
+  &--warning {
+    background-color: #fdf6ec;
+    color: #e6a23c;
+  }
+  &--error {
+    background-color: #fef0f0;
+    color: #f56c6c;
+  }
 }
 .alert-content {
   display: inline-block;

@@ -8,7 +8,7 @@ Alert.newInstance = (properties) => {
     data: props,
     render(h) {
       return h(Alert, {
-        props: props,
+        props,
       });
     },
   });

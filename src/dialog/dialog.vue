@@ -4,7 +4,9 @@
     <div class="dialog-content">
       <div class="dialog-header">
         <h3 class="dialog-title">{{ title }}</h3>
-        <span class="dialog-close" @click="onClose">X</span>
+        <span class="dialog-close" @click="onClose">
+          <img src="./../icon/icon-close.png" alt="" />
+        </span>
       </div>
       <div class="dialog-body">
         {{ message }}
@@ -14,7 +16,8 @@
         <!-- 自定义 Dialog 底部按钮 -->
         <slot name="footer"></slot>
         <!-- 默认 Dialog 底部按钮 -->
-        <button
+        <i-button
+          type="primary"
           v-if="showConfirmButton"
           class="dialog-confirm"
           :style="{
@@ -23,8 +26,8 @@
           @click="handleAction('confirm')"
         >
           {{ confirmButtonText || '确定' }}
-        </button>
-        <button
+        </i-button>
+        <i-button
           v-if="showCancelButton"
           :style="{
             color: cancelButtonColor,
@@ -33,7 +36,7 @@
           @click="handleAction('cancel')"
         >
           {{ cancelButtonText || '取消' }}
-        </button>
+        </i-button>
       </div>
     </div>
   </div>
@@ -96,7 +99,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .dialog {
   position: fixed;
   top: 0;
@@ -113,8 +116,9 @@ export default {
 .dialog-content {
   background-color: #fff;
   border-radius: 8px;
-  padding: 20px;
-  width: 400px;
+  padding: 30px 20px;
+  word-break: break-all;
+  width: 70%;
 }
 
 .dialog-header {
@@ -122,18 +126,27 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding: 20px 0px 10px;
 }
 
 .dialog-title {
+  font-weight: bolder;
   font-size: 18px;
+  line-height: 24px;
+  color: #303133;
 }
 
 .dialog-close {
   cursor: pointer;
+  img {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .dialog-body {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .dialog-footer {

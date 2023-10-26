@@ -22,6 +22,11 @@ export default {
     color: String,
     type: {
       type: String,
+      validor(value) {
+        return ['primary', 'default', 'info', 'danger', 'warning'].includes(
+          value
+        );
+      },
       default: 'default',
     },
     disabled: {
@@ -29,6 +34,7 @@ export default {
       default: false,
     },
     size: {
+      type: String,
       validor(value) {
         return ['small', 'default', 'large', 'tiny'].includes(value);
       },

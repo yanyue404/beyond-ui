@@ -3,7 +3,9 @@
   <demo-section>
     <demo-block title="基础用法">
       <div>
-        <button @click="showDrawer = true">打开费率表</button>
+        <i-button type="primary" @click="showDrawer = true"
+          >打开费率表</i-button
+        >
         <drawer-layout
           title="费率表"
           :show="showDrawer"

@@ -25,11 +25,10 @@
 默认 tab **list** 配置项：
 
 ```json
-// tab初始化配置, 可以随意调换或者新增元素，但【我要投保】健值insure不允许改变
+// tab初始化配置, 可以随意调换或者新增元素
 // - name: tab 标题名
 // - slot: tab ef名称
 // - component: tab 内容区域展示组件
-// - TDName: TD 插码名称
 [
   {
     name: '我要投保',

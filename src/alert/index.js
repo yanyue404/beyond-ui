@@ -9,20 +9,23 @@ function getMessageInstance() {
   return messageInstance;
 }
 
-function notice({ duration = 1.5, content = '' }) {
-  let instance = getMessageInstance();
+function notice({ type = '', duration = 1.5, content = '' }) {
+  const instance = getMessageInstance();
 
   instance.add({
-    content: content,
-    duration: duration,
+    type,
+    content,
+    duration,
   });
 }
 
 function Alert() {}
 
-Alert.info = (options) => {
-  return notice(options);
-};
+['info', 'success', 'warning', 'error'].forEach((v) => {
+  Alert[v] = (options) => {
+    return notice({ ...options, type: v });
+  };
+});
 
 Vue.prototype.$alert = Alert;
 

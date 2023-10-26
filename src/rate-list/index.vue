@@ -12,7 +12,10 @@
           @click="showDialog(index)"
         >
           <span>{{ unite[index] | fieldName(item.fields) }}</span>
-          <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAYAAADlep81AAABMElEQVRIS73VPU4DMRCG4XcU5QCUkJaIiiMgSMFVCCAa4BxAEyWcBYqEcAoELVByAIgGrXcTJdqsf1d2tdLK9qPP9ozoGYcId8APXa5lxBcZh16xxy8PwA7KreiQOcqRMQjvCAN55DOHqcLMUPrV/q8F6AnldAXIhNJzeijTFaYM5LkA9VFegN1cqFoy5cbfCMdSfOkFByyY5kA1YjoMZMKbAeVCuTDlqa2NxqS6nKS+Ph9MDWRNKgHli9kKahsVgmkEtYUKxVhBqagYjBMUi4rFeIFCUSkYb5Avams7KCpwVfR8+uNGHXJNsNUp/pBabwrEBCXkrOgmxqprL3tTQDLL9YMSsqI24w06pvWpUaDGO5WQTFJClqSik2kFZJK6ZJ8F92bBDjcy5sP1OGz//wFaq9d6+us+uQAAAABJRU5ErkJggg==" />
+          <img
+            alt=""
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAYAAADlep81AAABMElEQVRIS73VPU4DMRCG4XcU5QCUkJaIiiMgSMFVCCAa4BxAEyWcBYqEcAoELVByAIgGrXcTJdqsf1d2tdLK9qPP9ozoGYcId8APXa5lxBcZh16xxy8PwA7KreiQOcqRMQjvCAN55DOHqcLMUPrV/q8F6AnldAXIhNJzeijTFaYM5LkA9VFegN1cqFoy5cbfCMdSfOkFByyY5kA1YjoMZMKbAeVCuTDlqa2NxqS6nKS+Ph9MDWRNKgHli9kKahsVgmkEtYUKxVhBqagYjBMUi4rFeIFCUSkYb5Avams7KCpwVfR8+uNGHXJNsNUp/pBabwrEBCXkrOgmxqprL3tTQDLL9YMSsqI24w06pvWpUaDGO5WQTFJClqSik2kFZJK6ZJ8F92bBDjcy5sP1OGz//wFaq9d6+us+uQAAAABJRU5ErkJggg=="
+          />
         </span>
         <div class="rate-dialog" v-if="isShowDialog">
           <span

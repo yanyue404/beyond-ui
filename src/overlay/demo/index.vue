@@ -1,7 +1,7 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <i-button @click="show = true">打开遮罩层</i-button>
+      <i-button type="primary" @click="show = true">打开遮罩层</i-button>
       <Overlay :show="show" @click="show = false">
         <div class="wrapper">
           <div class="block"></div>

@@ -70,7 +70,7 @@
   </div>
 </template>
 <script>
-import { throttle } from 'lodash';
+import { throttle } from '../utils';
 
 export default {
   name: 'banner',

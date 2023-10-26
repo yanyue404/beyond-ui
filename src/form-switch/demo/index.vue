@@ -1,11 +1,13 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <form-switch
-        :list="list"
-        :value="renewalType == 'Y'"
-        @switchChange="renewalChange"
-      ></form-switch>
+      <div class="display-block">
+        <form-switch
+          :list="list"
+          :value="renewalType == 'Y'"
+          @switchChange="renewalChange"
+        ></form-switch>
+      </div>
     </demo-block>
   </demo-section>
 </template>
@@ -21,7 +23,7 @@ export default {
     };
   },
   methods: {
-    renewalChange(name, val) {
+    renewalChange() {
       this.renewalType === 'Y'
         ? (this.renewalType = 'N')
         : (this.renewalType = 'Y');
@@ -30,4 +32,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.display-block {
+  padding: 0 30px;
+}
+</style>

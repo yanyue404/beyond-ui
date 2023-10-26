@@ -48,7 +48,7 @@ export default {
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #333;
-    border: 2px solid #ccc;
+    border: 1PX solid #ccc;
     box-shadow: inset 0 0 0 1px rgba(204, 204, 204, 1);
     height: 72px;
     background: rgba(255, 255, 255, 1);
@@ -58,6 +58,7 @@ export default {
 
     &.active {
       color: #ff6600;
+      border-color: transparent;
       box-shadow: inset 0 0 0 2px #ff6600;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAS1BMVEUAAAD/ZQD/ZgD/ZwD/ZgD/ZwD/ZgD/ZgH/bw//eB7/ijz/k0z/lE3/nl7/qnP/rXf/soD/uYv/uo3/2cH/9/L/+/j/+/n//f3////G90O7AAAABnRSTlMAJn+t7vHInL8kAAAAcElEQVQoz33PSxaCMBAF0VKgQeIPNJr9r9RBaEBPP2t6R8XRorrmAMRm7R9riO3+GDpCm0o+GV/Wu7zOttBit2faxKnateS0ykrV5pKTy0Zub5cdubnsqdpltIB+/tCGNrShDW1oQxva0IY2tKENbR8XOwnggTv6twAAAABJRU5ErkJggg==);
       background-position: right top;
