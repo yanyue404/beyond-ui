@@ -70,6 +70,7 @@ export function throttle(fn, delay) {
   };
 }
 
+// 不适用于创建后直接修改 props 的情况， 会报修改 props wraning
 export function mount(component, opt, el) {
   if (!component) {
     console.warn('亲，请传入正确的组件');
@@ -84,6 +85,24 @@ export function mount(component, opt, el) {
       return h(component, opt);
     },
   });
+}
+
+// 使用 Vue.extend 的方式可以更好复用实例，从实例修改 props
+export function mountComponent(component, option) {
+  const root = document.createElement('div');
+  const getInstance = () => {
+    const constructor = Vue.extend(component);
+    return new constructor({ el: root, ...option });
+  };
+  const instance = getInstance();
+  // 添加节点
+  document.body.appendChild(root);
+  return {
+    instance,
+    unmount() {
+      instance.$el.remove();
+    },
+  };
 }
 
 export function destory(vm) {

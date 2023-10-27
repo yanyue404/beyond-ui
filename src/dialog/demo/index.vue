@@ -36,14 +36,18 @@ export default {
       this.dialogVisible = true;
     },
     handleConfirm() {
-      alert('点击了确定');
+      this.$toast('点击了确定');
     },
     onClickAlert() {
-      this.$dialog.alert({
-        title: '提示弹窗',
-        message: '代码写出来是给人看的，附带能在机器上运行 1',
-        confirmButtonColor: 'red',
-      });
+      this.$dialog
+        .alert({
+          title: '提示弹窗',
+          message: '代码写出来是给人看的，附带能在机器上运行 1',
+          confirmButtonColor: '#333',
+        })
+        .then(() => {
+          this.handleConfirm();
+        });
     },
     onClickAlert2() {
       this.$dialog
@@ -52,10 +56,10 @@ export default {
           message: '代码写出来是给人看的，附带能在机器上运行 2',
         })
         .then((action) => {
-          alert(action);
+          this.$toast(action);
         })
         .catch((action) => {
-          alert(action);
+          this.$toast(action);
         });
     },
   },

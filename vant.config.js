@@ -51,6 +51,10 @@ module.exports = {
             path: 'button',
             title: 'Button 按钮',
           },
+          {
+            path: 'skeleton',
+            title: 'Skeleton 骨架屏',
+          },
         ],
       },
       {
@@ -70,7 +74,15 @@ module.exports = {
           },
           {
             path: 'form-radio',
-            title: 'form-radio 单选',
+            title: 'form-radio 单选框',
+          },
+          {
+            path: 'form-checkbox',
+            title: 'form-checkbox 多选框',
+          },
+          {
+            path: 'form-step-number',
+            title: 'form-step-number 步进器',
           },
           // {
           //   path: 'form-radio-group',
@@ -109,14 +121,26 @@ module.exports = {
             path: 'steps',
             title: 'steps 步骤条',
           },
+          {
+            path: 'copy-text',
+            title: 'copy-text 复制文案',
+          },
         ],
       },
       {
         title: '全局组件',
         items: [
           {
+            path: 'toast',
+            title: 'Toast 提醒',
+          },
+          {
             path: 'alert',
             title: 'Alert 提示',
+          },
+          {
+            path: 'loading',
+            title: 'Loading 加载中',
           },
           {
             path: 'dialog',

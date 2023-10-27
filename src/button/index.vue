@@ -8,7 +8,7 @@
         [`i-button--${size}`]: size,
       },
     ]"
-    :style="{ backgroundColor: color }"
+    :style="colorStyle"
     @click="handleClick"
   >
     <slot>按钮</slot>
@@ -39,6 +39,16 @@ export default {
         return ['small', 'default', 'large', 'tiny'].includes(value);
       },
       default: 'default',
+    },
+  },
+  computed: {
+    colorStyle() {
+      return this.color
+        ? {
+            backgroundColor: this.color + '!important',
+            border: 'none !important',
+          }
+        : {};
     },
   },
   methods: {

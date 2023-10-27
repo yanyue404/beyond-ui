@@ -1,6 +1,4 @@
-# FormRadio
-
-卡片组件
+# FormRadio 单选框
 
 ### 代码
 

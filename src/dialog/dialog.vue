@@ -20,18 +20,14 @@
           type="primary"
           v-if="showConfirmButton"
           class="dialog-confirm"
-          :style="{
-            color: confirmButtonColor,
-          }"
+          :color="confirmButtonColor"
           @click="handleAction('confirm')"
         >
           {{ confirmButtonText || '确定' }}
         </i-button>
         <i-button
           v-if="showCancelButton"
-          :style="{
-            color: cancelButtonColor,
-          }"
+          :color="cancelButtonColor"
           class="dialog-cancel"
           @click="handleAction('cancel')"
         >
@@ -126,7 +122,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 20px 0px 10px;
+  padding: 0 0 10px 0;
 }
 
 .dialog-title {

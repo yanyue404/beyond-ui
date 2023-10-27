@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import { isServer, mount, destory } from '../utils';
+import { isServer, mountComponent } from '../utils';
 import DialogCom from './dialog.vue';
 
-let instance, dialog;
+let instance;
 
 function Dialog(options) {
   if (isServer()) {
@@ -11,25 +11,25 @@ function Dialog(options) {
 
   return new Promise((resolve, reject) => {
     if (!instance) {
-      instance = mount(DialogCom, {
-        on: {
-          input: (val) => {
-            destory(instance);
-            dialog.value = val;
-            instance = null;
-            Dialog.resetDefaultOptions();
-          },
+      ({ instance } = mountComponent(DialogCom, {
+        propsData: {
+          lazyRender: false,
         },
-        props: Object.assign(Dialog.currentOptions, options),
-      });
+      }));
 
-      dialog = instance.$children[0];
+      instance.$on('input', (value) => {
+        instance.value = value;
+        Dialog.resetDefaultOptions();
+      });
     }
 
-    Object.assign(dialog, {
+    Object.assign(instance, Dialog.currentOptions, options, {
       resolve,
       reject,
     });
+
+    //  处理好实例再插入页面
+    document.body.appendChild(instance.$el);
   });
 }
 
@@ -46,7 +46,7 @@ Dialog.defaultOptions = {
   showCancelButton: false,
   closeOnClickOverlay: false, // 不支持
   callback: (action) => {
-    dialog[action === 'confirm' ? 'resolve' : 'reject'](action);
+    instance[action === 'confirm' ? 'resolve' : 'reject'](action);
   },
 };
 

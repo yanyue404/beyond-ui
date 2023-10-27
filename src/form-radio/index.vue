@@ -48,13 +48,14 @@ export default {
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #333;
-    border: 1PX solid #ccc;
+    border: 1px solid #ccc;
     box-shadow: inset 0 0 0 1px rgba(204, 204, 204, 1);
     height: 72px;
     background: rgba(255, 255, 255, 1);
     border-radius: 6px;
-    padding: 0 30px;
+    padding: 0 10px;
     box-sizing: border-box;
+    cursor: pointer;
 
     &.active {
       color: #ff6600;

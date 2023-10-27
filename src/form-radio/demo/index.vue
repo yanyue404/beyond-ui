@@ -5,11 +5,11 @@
         <form-radio-group
           id="insuredRelation_radio_group"
           class="relation-radio-group"
-          :value="insuredRelationship"
-          @change="relationChange"
+          :value="def"
+          @change="onChange"
         >
           <form-radio
-            v-for="(item, index) in relations"
+            v-for="(item, index) in options"
             :id="`insuredRelation_radio_${item.key}`"
             :key="index"
             class="relation-radio"
@@ -25,30 +25,30 @@
 export default {
   data() {
     return {
-      insuredRelationship: '01',
-      relations: [
+      def: '01',
+      options: [
         {
           key: '01',
-          value: '本人',
+          value: 'Option A',
         },
         {
           key: '02',
-          value: '配偶',
+          value: 'Option B',
         },
         {
           key: '03',
-          value: '父母',
+          value: 'Option C',
         },
         {
           key: '04',
-          value: '子女',
+          value: 'Option D',
         },
       ],
     };
   },
   methods: {
-    relationChange(relation) {
-      this.insuredRelationship = relation;
+    onChange(val) {
+      this.def = val;
     },
   },
 };

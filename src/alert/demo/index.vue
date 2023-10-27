@@ -5,7 +5,6 @@
         <i-button @click="handleOpen1">打开消息提示</i-button>
       </div>
     </demo-block>
-
     <demo-block title="不同状态">
       <div>
         <i-button type="info" @click="handleOpen1">消息</i-button>
