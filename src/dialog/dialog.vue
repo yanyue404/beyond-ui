@@ -2,37 +2,42 @@
   <div class="dialog" v-show="isShow">
     <!-- Dialog 内容 -->
     <div class="dialog-content">
-      <div class="dialog-header">
-        <h3 class="dialog-title">{{ title }}</h3>
-        <span class="dialog-close" @click="onClose">
-          <img src="./../icon/icon-close.png" alt="" />
-        </span>
-      </div>
+      <!-- 自定义 Dialog 标题 -->
+      <slot name="title">
+        <div class="dialog-header">
+          <h3 class="dialog-title">{{ title }}</h3>
+          <span class="dialog-close" @click="onClose">
+            <img src="./../icon/icon-close.png" alt="" />
+          </span>
+        </div>
+      </slot>
       <div class="dialog-body">
-        {{ message }}
-        <slot></slot>
+        <!-- 自定义 Dialog 内容 -->
+        <slot>
+          {{ message }}
+        </slot>
       </div>
       <div class="dialog-footer">
         <!-- 自定义 Dialog 底部按钮 -->
-        <slot name="footer"></slot>
-        <!-- 默认 Dialog 底部按钮 -->
-        <i-button
-          type="primary"
-          v-if="showConfirmButton"
-          class="dialog-confirm"
-          :color="confirmButtonColor"
-          @click="handleAction('confirm')"
-        >
-          {{ confirmButtonText || '确定' }}
-        </i-button>
-        <i-button
-          v-if="showCancelButton"
-          :color="cancelButtonColor"
-          class="dialog-cancel"
-          @click="handleAction('cancel')"
-        >
-          {{ cancelButtonText || '取消' }}
-        </i-button>
+        <slot name="footer">
+          <i-button
+            type="primary"
+            v-if="showConfirmButton"
+            class="dialog-confirm"
+            :color="confirmButtonColor"
+            @click="handleAction('confirm')"
+          >
+            {{ confirmButtonText || '确定' }}
+          </i-button>
+          <i-button
+            v-if="showCancelButton"
+            :color="cancelButtonColor"
+            class="dialog-cancel"
+            @click="handleAction('cancel')"
+          >
+            {{ cancelButtonText || '取消' }}
+          </i-button>
+        </slot>
       </div>
     </div>
   </div>

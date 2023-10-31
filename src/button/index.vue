@@ -65,14 +65,14 @@ export default {
 @import '../style/var.scss';
 .i-button {
   line-height: 1.42857143;
-  margin: 10px;
-  padding: 12px 24px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 12px 36px;
   color: #fff;
   font-size: 32px;
   cursor: pointer;
   border: none;
-  border-radius: $button-border-radius;
-
+  border-radius: 50px;
   &--default {
     color: $button-default-color;
     background-color: $button-default-background-color;
@@ -113,6 +113,7 @@ export default {
     line-height: 1.5;
   }
   &--large {
+    width: 100%;
     padding: 20px 32px;
     font-size: 36px;
     line-height: 1.3333333;

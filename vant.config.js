@@ -125,6 +125,14 @@ module.exports = {
             path: 'copy-text',
             title: 'copy-text 复制文案',
           },
+          {
+            path: 'signature',
+            title: 'Signature 签名',
+          },
+          {
+            path: 'circleprogress',
+            title: 'circleprogress 圆形进度条',
+          },
         ],
       },
       {
@@ -145,6 +153,10 @@ module.exports = {
           {
             path: 'dialog',
             title: 'Dialog 弹窗',
+          },
+          {
+            path: 'lazyload',
+            title: 'LazyLoad 懒加载',
           },
         ],
       },
