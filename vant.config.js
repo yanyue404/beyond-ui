@@ -31,16 +31,8 @@ module.exports = {
             title: '贡献指南',
           },
           {
-            path: 'deploy',
-            title: '发布说明',
-          },
-          {
             path: 'changelog',
             title: '更新日志',
-          },
-          {
-            path: 'reference',
-            title: '参考链接',
           },
         ],
       },
@@ -83,6 +75,10 @@ module.exports = {
           {
             path: 'form-step-number',
             title: 'form-step-number 步进器',
+          },
+          {
+            path: 'form-uploader',
+            title: 'form-uploader 上传',
           },
           // {
           //   path: 'form-radio-group',
@@ -127,7 +123,7 @@ module.exports = {
           },
           {
             path: 'signature',
-            title: 'Signature 签名',
+            title: 'signature 签名',
           },
           {
             path: 'circleprogress',

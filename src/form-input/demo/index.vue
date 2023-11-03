@@ -60,7 +60,7 @@ export default {
         if (warn) {
           this.formWarning = 'applicantName';
           setTimeout(() => {
-            alert(warn);
+            this.$toast(warn);
           }, 0);
         }
       }
@@ -69,7 +69,7 @@ export default {
         if (warn) {
           this.formWarning = 'applicantPhone';
           setTimeout(() => {
-            alert(warn);
+            this.$toast(warn);
           }, 0);
         }
       }

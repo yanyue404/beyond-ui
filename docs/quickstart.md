@@ -4,25 +4,25 @@
 
 ```bash
 # 通过 npm
-npm i Beyond-UI
+npm i beyond-ui
 
 # 通过 yarn
-yarn add Beyond-UI
+yarn add beyond-ui
 
 # 通过 pnpm
-pnpm add Beyond-UI
+pnpm add beyond-ui
 ```
 
 ### 引入组件库
 
 ```js
 // 全部引入
-import BeyondUI from 'Beyond-UI';
-import 'Beyond-UI/lib/style/index.css';
-Vue.use(BeyondUI);
+import TkUI from 'beyond-ui';
+import 'beyond-ui/lib/style/index.css';
+Vue.use(TkUI);
 
 // 按需引用
-import { banner } from 'Beyond-UI';
-import 'Beyond-UI/lib/banner/style';
+import { banner } from 'beyond-ui';
+import 'beyond-ui/lib/banner/style';
 Vue.use(banner);
 ```

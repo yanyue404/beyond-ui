@@ -52,6 +52,10 @@ h6 {
   font-size: 100%;
   font-weight: 500;
 }
+body,
+.van-doc-simulator {
+  // font-size: 16px !important;
+}
 .clearfix:after,
 .clearfix:before {
   content: ' ';
@@ -149,3 +153,8 @@ li {
   align-items: center;
 }
 
+.van-doc-demo-section {
+  padding: 16px;
+}
+.van-doc-demo-block {
+}

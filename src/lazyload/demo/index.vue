@@ -51,14 +51,5 @@ export default {
     background-size: 100% 100%;
     background-color: #ddd;
   }
-  img[lazy='loading'] {
-    /*your style here*/
-  }
-  img[lazy='error'] {
-    /*your style here*/
-  }
-  img[lazy='loaded'] {
-    /*your style here*/
-  }
 }
 </style>

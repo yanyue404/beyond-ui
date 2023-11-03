@@ -18,12 +18,12 @@ Vue.use(FormSwitch);
 ### 基础用法
 
 ```html
-<div class="renewal-switch">
-  次年自动重新投保
+<div class="demo">
+  <span>是否开启</span>
   <form-switch
-    :list="renewalTypeList"
-    :value="renewalType == 'Y'"
-    @switchChange="renewalChange"
+    :list="list"
+    :value="openState == 'Y'"
+    @switchChange="onChange"
   ></form-switch>
 </div>
 ```

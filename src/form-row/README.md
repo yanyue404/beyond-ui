@@ -46,7 +46,7 @@ Vue.use(FormRow);
 | 参数     | 说明       | 类型    | 默认值 | 是否必选 |
 | -------- | ---------- | ------- | ------ | -------- |
 | title    | 标题       | String  | -      | 否       |
-| noborder | 是否有边框 | Boolean | -      | 否       |
+| noborder | 是否有边框 | Boolean | false  | 否       |
 
 ### slot
 

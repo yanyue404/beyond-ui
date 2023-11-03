@@ -6,6 +6,18 @@
 
 以下是关于向 Beyond-UI 提交反馈或代码的指南。在向 Beyond-UI 提交 issue 或者 PR 之前，请先花几分钟时间阅读以下文字。
 
+## Vant CLI
+
+### 特性
+
+[Vant CLI](https://github.com/youzan/vant/blob/main/packages/vant-cli/README.zh-CN.md) 是一个基于 Vite 实现的 Vue 组件库构建工具，通过 Vant CLI 可以快速搭建一套功能完备的 Vue 组件库。
+
+- 基于 Vite 实现，享受愉悦的开发体验
+- 提供丰富的命令，涵盖从开发测试到构建发布的完整流程
+- 基于约定的目录结构，自动生成优雅的文档站点和组件示例
+- 内置 ESLint 校验规则，提交代码时自动执行校验
+- 构建后的组件库默认支持按需引入、主题定制、Tree Shaking
+
 ### Issue 规范
 
 - 遇到问题时，请先确认这个问题是否已经在 issue 中有记录或者已被修复
@@ -19,7 +31,7 @@
 
 ```bash
 # 克隆仓库， 默认为 dev 分支
-git clone https://github.com/yanyue404/beyond-ui.git
+git clone beyond-ui.git
 
 # 安装依赖
 cd beyond-ui && yarn
@@ -48,12 +60,20 @@ beyond-ui
 
 ```
 src
-└─ demo-button
+└─ button
    ├─ demo             # 示例代码
    ├─ test             # 单元测试
    ├─ index.vue        # 组件入口
    └─ README.md        # 说明文档
 ```
+
+### 代码规范
+
+- 组件命名： 组件入口的 `name` 为组件名
+- 设计单位： 项目单位使用 `px` 为单位名, 设计稿尺寸 = 750px = 7.5rem ，1rem = 100px
+- icon 资源： 暂不支持图片文件直接引入, 请使用 base64 编码（[在线工具](http://mtest.tkcn.cc/tk-online/common/smallfunc/#/base64/index)）
+- domo 用例: 必须补充
+- 零依赖:工具方法自己实现, 参 `src/utils` 目录, 不依赖第三方组件库
 
 ### 提交规范
 
@@ -91,43 +111,18 @@ module.exports = {
 };
 ```
 
-## 提交 PR
+## 发布
 
-### Pull Request 规范
-
-如果你是第一次在 GitHub 上提 Pull Request ，可以阅读下面这两篇文章来学习：
-
-- [如何优雅地在 GitHub 上贡献代码](如何优雅地在github上贡献代码)
-- [第一次参与开源](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.chs.md)
-
-#### 规范
-
-- 如果遇到问题，建议保持你的 PR 足够小。保证一个 PR 只解决一个问题或只添加一个功能
-- 当新增组件或者修改原有组件时，记得增加或者修改测试代码，保证代码的稳定
-- 在 PR 中请添加合适的描述，并关联相关的 Issue
-
-### Pull Request 流程
-
-1. fork 主仓库，如果已经 fork 过，请同步主仓库的最新代码
-2. 基于 fork 后仓库的 dev 分支新建一个分支，比如 `feature/button_color`
-3. 在新分支上进行开发，开发完成后，提 Pull Request 到主仓库的 dev 分支
-4. Pull Request 会在 Review 通过后被合并到主仓库
-5. 等待 Vant 发布版本，一般是每周一次
-
-### 同步最新代码
-
-提 Pull Request 前，请依照下面的流程同步主仓库的最新代码：
+### npm
 
 ```bash
-# 添加主仓库到 remote，作为 fork 后仓库的上游仓库
-git remote add upstream https://github.com/yanyue404/beyond-ui.git
+npm login
 
-# 拉取主仓库最新代码
-git fetch upstream
+npm publish
+```
 
-# 切换至 dev 分支
-git checkout dev
+### tag
 
-# 合并主仓库代码
-git merge upstream/dev
+```bash
+npm run deploy:tag v1.0.0
 ```

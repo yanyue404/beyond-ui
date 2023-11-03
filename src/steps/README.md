@@ -20,8 +20,8 @@ Steps 是一个步骤条组件
     就获得了焦点。现在让我们完善这个指令：</steps-item
   >
 </steps>
-<demo-button @click="prev">上一步</demo-button>
-<demo-button class="gutter-top" @click="next">下一步</demo-button>
+<i-button @click="prev">上一步</i-button>
+<i-button class="gutter-top" @click="next">下一步</i-button>
 ```
 
 ## API

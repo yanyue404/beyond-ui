@@ -28,9 +28,4 @@
   </demo-section>
 </template>
 
-<style lang="scss" scoped>
-.demo-button {
-  width: 100%;
-  padding: 57px 17px 15px;
-}
-</style>
+<style lang="scss" scoped></style>

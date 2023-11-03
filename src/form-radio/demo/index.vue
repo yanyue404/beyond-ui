@@ -1,23 +1,21 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <div class="display-block">
-        <form-radio-group
-          id="insuredRelation_radio_group"
-          class="relation-radio-group"
-          :value="def"
-          @change="onChange"
+      <form-radio-group
+        id="insuredRelation_radio_group"
+        class="relation-radio-group"
+        :value="def"
+        @change="onChange"
+      >
+        <form-radio
+          v-for="(item, index) in options"
+          :id="`insuredRelation_radio_${item.key}`"
+          :key="index"
+          class="relation-radio"
+          :value="item.key"
+          >{{ item.value }}</form-radio
         >
-          <form-radio
-            v-for="(item, index) in options"
-            :id="`insuredRelation_radio_${item.key}`"
-            :key="index"
-            class="relation-radio"
-            :value="item.key"
-            >{{ item.value }}</form-radio
-          >
-        </form-radio-group>
-      </div>
+      </form-radio-group>
     </demo-block>
   </demo-section>
 </template>
@@ -54,9 +52,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.display-block {
-  padding: 0 30px;
-}
 .relation-radio-group {
   display: flex;
   justify-content: space-between;
