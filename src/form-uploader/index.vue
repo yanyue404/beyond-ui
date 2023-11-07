@@ -1,11 +1,17 @@
 <template>
   <div class="uploader" @click="$emit('click-upload', $event)">
     <div class="upload-container" @click="$emit('click-upload', $event)">
-      <div class="upload" v-for="(file, index) in fileList" :key="index">
+      <div class="upload" v-for="(file, index) in values" :key="index">
         <!-- 本地上传后展示 -->
-        <img v-if="file" @click="previewImg(index)" :src="file" alt="" />
         <img
-          v-if="file"
+          class="preview-img"
+          v-if="itemImg(file)"
+          @click="previewImg(index)"
+          :src="itemImg(file)"
+          alt=""
+        />
+        <img
+          v-if="itemImg(file)"
           @click="remove($event, index)"
           class="close-icon"
           src="../icon/close-img.png"
@@ -23,14 +29,14 @@
         <!-- 自定义上传样式 -->
         <div class="upload-cover-wrapper flex-c-c">
           <slot name="upload-cover">
-            <span v-if="!file" class="upload-text-center">{{
+            <span v-if="!itemImg(file)" class="upload-text-center">{{
               uploadText
             }}</span>
           </slot>
         </div>
         <!-- 自定义预览样式 -->
         <div class="preview-cover-wrapper flex-c-c">
-          <slot name="preview-cover" v-if="file"> </slot>
+          <slot name="preview-cover" :file="file" v-if="itemImg(file)"> </slot>
         </div>
       </div>
     </div>
@@ -76,7 +82,15 @@ function compressorImage(image, { maxWidth, maxHeight, quality }) {
 }
 export default {
   name: 'form-uploader',
+  model: {
+    prop: 'fileList',
+  },
   props: {
+    // 支持 v-model
+    fileList: {
+      type: Array,
+      default: () => [],
+    },
     // 上传前置处理, 判断大小格式
     beforeRead: Function,
     afterRead: {
@@ -120,12 +134,26 @@ export default {
   },
 
   data() {
-    return {
-      fileList: new Array(this.maxCount).fill(''),
-    };
+    return {};
+  },
+  computed: {
+    values() {
+      return Array.from({ length: this.maxCount }, (v, index) => {
+        const temp = this.fileList[index];
+        return {
+          index,
+          url: temp?.url || '',
+          status: temp?.status || '', // 状态
+          message: temp?.message || '', // 审核的文案
+        };
+      });
+    },
   },
 
   methods: {
+    itemImg(item) {
+      return (item && item.url) || '';
+    },
     async onChange(e, index) {
       try {
         let file = e.target.files[0];
@@ -143,19 +171,27 @@ export default {
           });
         }
         const res = await readFile(file, this.resultType);
-        this.afterRead && (await this.afterRead(res));
-        this.$set(this.fileList, index, res);
+
+        const fileList = this.values.slice(0);
+
+        fileList[index].url = res;
+
+        this.afterRead && (await this.afterRead(fileList[index]));
+        this.$emit('input', fileList);
       } catch (err) {
+        console.log('err', err);
+
         // 上传失败时需要置空input
         this.$refs._file.value = '';
       }
     },
     remove(e, index) {
-      this.$set(this.fileList, index, '');
+      const fileList = this.values.slice(0);
+      fileList[index].url = '';
+      this.$emit('input', fileList);
     },
     previewImg(index) {
-      console.log('index', index);
-      this.$emit('preview', this.fileList, index);
+      this.$emit('preview', this.values, index);
     },
   },
 };
@@ -168,6 +204,7 @@ export default {
 
   .upload-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     .upload {
       position: relative;
@@ -192,7 +229,7 @@ export default {
         cursor: pointer;
         opacity: 0;
       }
-      img {
+      .preview-img {
         z-index: 100;
         width: 100%;
         height: 100%;

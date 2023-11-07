@@ -83,3 +83,15 @@ $button-border-radius: $border-radius-sm;
 $button-round-border-radius: $border-radius-max;
 $button-plain-background-color: $white;
 $button-disabled-opacity: $disabled-opacity;
+
+$title-color: #2d2d2d;
+$dark-color: #dadada;
+
+@mixin cell-border {
+  background-image: linear-gradient(
+    rgba($dark-color, 0.5),
+    rgba($dark-color, 0.5)
+  );
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}

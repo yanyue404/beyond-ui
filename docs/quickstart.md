@@ -17,9 +17,9 @@ pnpm add beyond-ui
 
 ```js
 // 全部引入
-import TkUI from 'beyond-ui';
+import BeyondUI from 'beyond-ui';
 import 'beyond-ui/lib/style/index.css';
-Vue.use(TkUI);
+Vue.use(BeyondUI);
 
 // 按需引用
 import { banner } from 'beyond-ui';

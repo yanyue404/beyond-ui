@@ -47,6 +47,10 @@ module.exports = {
             path: 'skeleton',
             title: 'Skeleton 骨架屏',
           },
+          {
+            path: 'cell',
+            title: 'Cell 单元格',
+          },
         ],
       },
       {
