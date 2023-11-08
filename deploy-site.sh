@@ -13,6 +13,9 @@ cd site
 # echo 'www.example.com' > CNAME
 
 git init
+git config user.name "yanyue404"
+git config user.email "xiaoyueyue165@gmail.com"
+
 git add -A
 git commit -m 'deploy: ui docs'
 

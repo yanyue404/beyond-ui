@@ -71,7 +71,7 @@ src
 
 - 组件命名： 组件入口的 `name` 为组件名
 - 设计单位： 项目单位使用 `px` 为单位名, 设计稿尺寸 = 750px = 7.5rem ，1rem = 100px
-- icon 资源： 暂不支持图片文件直接引入, 请使用 base64 编码（[在线工具](http://mtest.tkcn.cc/tk-online/common/smallfunc/#/base64/index)）
+- icon 资源： 暂不支持图片文件直接引入, 请使用 base64 编码（[在线工具](http://mtest.tkcn.cc/beyond-online/common/smallfunc/#/base64/index)）
 - domo 用例: 必须补充
 - 零依赖:工具方法自己实现, 参 `src/utils` 目录, 不依赖第三方组件库
 

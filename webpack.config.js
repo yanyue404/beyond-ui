@@ -14,7 +14,16 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.svg$/, // svg 格式是用于图标库 icon 的
+        use: {
+          loader: 'raw-loader',
+          options: {
+            esModule: false, // 否则加载时为 [object]
+          },
+        },
+      },
     ],
   },
-  devtool: 'source-map',
+  devtool: 'source-map', // 开启调试模式
 };

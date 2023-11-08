@@ -51,6 +51,10 @@ module.exports = {
             path: 'cell',
             title: 'Cell 单元格',
           },
+          {
+            path: 'icon',
+            title: 'Icon 图标',
+          },
         ],
       },
       {
