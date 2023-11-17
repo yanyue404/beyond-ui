@@ -79,33 +79,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .c-form-row {
-  padding: 12px;
+  padding: 10px;
   background: #fff;
   border-radius: 0.1rem;
 }
 label {
   padding-left: 15px;
-}
-label:not(.form-input) {
-  width: 161px;
-  font-size: 16px;
-  padding-right: 11px;
-  text-align: right;
-  position: relative;
-  &::after {
-    position: absolute;
-    content: '';
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 2px;
-    height: 15px;
-    background-color: #ccc;
-  }
-}
-
-label {
-  padding-left: 10px;
 }
 </style>

@@ -26,10 +26,8 @@
   background: #fff;
   padding-bottom: 10px;
 }
-input {
-  flex: 1;
-}
+
 span {
-  font-size: 18px;
+  font-size: 12px;
 }
 </style>

@@ -21,6 +21,7 @@
       <i-button color="#00c0ef">按钮 #00c0ef</i-button>
       <i-button color="#f39c12">按钮 #f39c12</i-button>
       <i-button color="#dd4b39">按钮 #dd4b39</i-button>
+      <i-button color="#ff6600">按钮 #ff6600</i-button>
     </demo-block>
 
     <demo-block title="禁用状态">

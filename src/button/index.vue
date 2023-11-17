@@ -50,9 +50,9 @@ export default {
     colorStyle() {
       return this.color
         ? {
-            backgroundColor: this.color + '!important',
-            border: 'none !important',
-            color: '#fff',
+            backgroundColor: this.color,
+            border: this.plain ? `1px solid ${this.color}` : 'none !important',
+            color: this.plain ? this.color : '#fff',
           }
         : {};
     },
@@ -128,7 +128,7 @@ export default {
     border: $button-border-width solid $button-warning-border-color;
   }
   &--plain {
-    background-color: $button-plain-background-color;
+    background-color: $button-plain-background-color !important;
 
     &.i-button--primary {
       color: $button-primary-background-color;

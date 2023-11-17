@@ -26,22 +26,24 @@ export default {
 .c-form-row {
   padding-left: 15px;
   .row {
-    min-height: 40px;
+    min-height: 45px;
     flex-wrap: wrap;
     border-bottom: 1px solid #e7e7e7;
-    padding-right: 30px;
+    padding-right: 15px;
 
     &.noborder {
       border-bottom-color: transparent;
     }
     label {
-      height: 18px;
-      width: 50%;
-      font-size: 16px;
+      height: 20px;
+      font-size: 18px;
       font-family: PingFangSC-Regular, PingFang SC;
       font-weight: 400;
       color: rgba(51, 51, 51, 1);
-      line-height: 18px;
+      line-height: 20px;
+    }
+    input {
+      font-size: 16px;
     }
   }
 }
