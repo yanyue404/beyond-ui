@@ -162,6 +162,10 @@ module.exports = {
             path: 'lazyload',
             title: 'LazyLoad 懒加载',
           },
+          {
+            path: 'notify',
+            title: 'Notify 消息通知',
+          },
         ],
       },
     ],

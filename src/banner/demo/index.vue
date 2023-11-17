@@ -33,31 +33,31 @@ export default {
 
 <style lang="scss" scoped>
 .appraise-banner {
-  width: 750px !important;
+  width: 100vw !important;
   margin: 0 !important;
   position: relative;
   box-sizing: border-box;
   overflow: inherit;
   overflow-x: hidden;
-  padding: 0.28rem 0 0.3rem;
+  padding: 14px 0 2px;
   ::v-deep {
     .c-banner-items {
-      width: 690px;
+      width: 92vw;
     }
     .c-banner-item {
-      width: 640px !important;
-      border-radius: 10px;
-      padding-right: 30px;
+      width: 84.3vw !important;
+      border-radius: 2.5px;
+      padding-right: 7.5px;
       padding-left: 0;
 
       div {
-        box-shadow: 0px 6px 12px 4px rgba(233, 233, 233, 0.5);
-        border-radius: 20px !important;
+        box-shadow: 0px 3px 6px 2px rgba(233, 233, 233, 0.5);
+        border-radius: 10px !important;
       }
 
       &:last-child {
         padding-right: 0px;
-        width: 610px !important;
+        width: 81.3vw !important;
       }
       img {
         height: auto;

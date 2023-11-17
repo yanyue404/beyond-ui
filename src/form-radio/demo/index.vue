@@ -17,6 +17,26 @@
         >
       </form-radio-group>
     </demo-block>
+    <demo-block title="作用域插槽">
+      <form-radio-group
+        id="insuredRelation_radio_group"
+        class="relation-radio-group"
+        :value="def"
+        @change="onChange"
+      >
+        <form-radio
+          v-for="(item, index) in options"
+          :id="`insuredRelation_radio_${item.key}`"
+          :key="index"
+          class="relation-radio"
+          :value="item.key"
+        >
+          <template slot-scope="scope">{{
+            scope.checked ? '选中' : '未选择'
+          }}</template>
+        </form-radio>
+      </form-radio-group>
+    </demo-block>
   </demo-section>
 </template>
 <script>
@@ -56,10 +76,10 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  margin: 10px 0;
+  margin: 5px 0;
   .relation-radio {
     flex: 1;
-    margin-left: 16px;
+    margin-left: 8px;
     margin-top: 0;
     margin-bottom: 0;
 

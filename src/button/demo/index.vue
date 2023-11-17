@@ -8,6 +8,13 @@
       <i-button type="warning">warning</i-button>
     </demo-block>
 
+    <demo-block title="朴素按钮">
+      <i-button type="primary" plain>primary </i-button>
+      <i-button type="info" plain>info</i-button>
+      <i-button type="danger" plain>danger</i-button>
+      <i-button type="warning" plain>warning</i-button>
+    </demo-block>
+
     <demo-block title="自定义颜色">
       <i-button color="#367fa9">按钮 #367fa9</i-button>
       <i-button color="#00a65a">按钮 #00a65a</i-button>

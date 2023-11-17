@@ -239,9 +239,9 @@ export default {
 
   .rate-tips {
     width: 100%;
-    height: 72px;
-    font-size: 24px;
-    line-height: 72px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 36px;
     text-align: center;
     box-sizing: border-box;
     background-color: #ff6600;
@@ -252,14 +252,14 @@ export default {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 80px;
+    height: 40px;
     background-color: #fff;
     color: #ff6600;
     position: relative;
 
     .rate-control-item {
       flex: 1;
-      font-size: 28px;
+      font-size: 12px;
       white-space: nowrap;
       text-overflow: ellipsis;
       display: flex;
@@ -269,9 +269,9 @@ export default {
       width: 0;
 
       img {
-        width: 16px;
-        height: 10px;
-        margin-left: 6px;
+        width: 8px;
+        height: 5px;
+        margin-left: 3px;
       }
     }
   }
@@ -284,7 +284,7 @@ export default {
     box-sizing: border-box;
     border: 1px solid #ff6600;
     left: 0;
-    top: 80px;
+    top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,17 +292,17 @@ export default {
     span {
       display: flex;
       box-sizing: border-box;
-      height: 90px;
+      height: 45px;
       align-items: center;
-      font-size: 28px;
+      font-size: 14px;
       color: #333;
       width: calc(100% - 60px);
       flex-shrink: 0;
 
       img {
-        width: 36px;
-        height: 24px;
-        margin-left: 12px;
+        width: 18px;
+        height: 17px;
+        margin-left: 6px;
       }
     }
 
@@ -312,24 +312,24 @@ export default {
     }
 
     .triangle_border_up {
-      width: 22px;
-      height: 22px;
+      width: 11px;
+      height: 11px;
       border: 1px solid #ff6600;
       background-color: #fff;
       position: absolute;
       z-index: -2;
       transform: translate(-50%, 50%) rotate(45deg);
-      top: -22px;
+      top: -11px;
       transition: left 0.3s ease;
     }
   }
 
   .rate-box-top {
     flex-shrink: 0;
-    font-size: 28px;
+    font-size: 14px;
     font-weight: 500;
     color: #333;
-    height: 80px;
+    height: 40px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -357,10 +357,10 @@ export default {
 
   .rate-box-item {
     flex-shrink: 0;
-    font-size: 26px;
+    font-size: 12px;
     font-weight: 400;
     color: #666;
-    height: 80px;
+    height: 40px;
     width: 100%;
     display: flex;
     align-items: center;

@@ -22,18 +22,18 @@ export default {
   left: 50%;
   top: 50%;
   background-color: rgba(51, 51, 51, 0.9);
-  padding: 0.43rem 0.78rem 0.63rem 0.74rem;
-  border-radius: 5px;
+  padding: 20px 38px 30px 38px;
+  border-radius: 3px;
   transform: translate(-50%, -50%);
   color: #fff;
   z-index: 999;
   img {
-    width: 0.88rem;
-    height: 0.88rem;
+    width: 44px;
+    height: 44px;
   }
   span {
-    padding-top: 0.19rem;
-    font-size: 0.28rem;
+    padding-top: 10px;
+    font-size: 16px;
     color: #fff;
   }
 }

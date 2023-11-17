@@ -43,9 +43,9 @@ export default {
   display: inline-flex;
 }
 .form-checkbox {
-  margin: 0 10px;
-  width: 48px;
-  height: 48px;
+  margin: 0 5px;
+  width: 18px;
+  height: 18px;
   background-image: url('../icon/uncheck.png');
   background-size: cover;
   &--checked {

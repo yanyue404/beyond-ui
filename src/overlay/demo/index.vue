@@ -28,8 +28,8 @@ export default {
   height: 100%;
 }
 .block {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background: #fff;
 }
 </style>

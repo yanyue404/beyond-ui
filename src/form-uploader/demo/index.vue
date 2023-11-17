@@ -90,37 +90,37 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 40px;
+  height: 20px;
   background: #000000;
   opacity: 0.5;
   color: #fff;
   text-align: center;
-  font-size: 28px;
+  font-size: 16px;
 }
 .upload-base {
   height: 100%;
-  padding: 15px 0 10px;
+  padding: 7px 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   img {
-    width: 50px;
-    height: 40px;
+    width: 25px;
+    height: 20px;
   }
   span {
     display: inline-block;
-    width: 139px;
-    height: 54px;
+    width: 70px;
+    height: 27px;
     background: #fff1e1;
-    border-radius: 27px;
+    border-radius: 14px;
     border: 1px solid #ffc481;
-    font-size: 24px;
+    font-size: 12px;
     font-family: PingFangSC-Semibold, PingFang SC;
     font-weight: 600;
     color: #ff8910;
     text-align: center;
-    line-height: 54px;
+    line-height: 27px;
   }
 }
 </style>

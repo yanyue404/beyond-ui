@@ -7,10 +7,10 @@
     </demo-block>
     <demo-block title="不同状态">
       <div>
-        <i-button type="info" @click="handleOpen1">消息</i-button>
         <i-button type="primary" @click="handleOpen2">成功</i-button>
         <i-button type="warning" @click="handleOpen3">警告</i-button>
         <i-button type="danger" @click="handleOpen4">错误</i-button>
+        <i-button type="info" @click="handleOpen1">消息</i-button>
       </div>
     </demo-block>
   </demo-section>

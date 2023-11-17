@@ -52,8 +52,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .tab-item {
-  padding: 30px;
-  height: 750px;
+  padding: 15px;
+  height: 320px;
   border: 1px solid #ccc;
 }
 </style>

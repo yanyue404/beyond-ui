@@ -1,7 +1,7 @@
 <template>
   <div class="popup">
     <!-- 蒙层 -->
-    <transition name="fade">
+    <transition v-if="overlay" name="fade">
       <div class="popup-overlay" @click="clickMask" v-show="show"></div>
     </transition>
     <!-- 弹出层 -->
@@ -24,6 +24,10 @@ export default {
     position: {
       type: String,
       default: 'bottom',
+    },
+    overlay: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
@@ -77,6 +81,7 @@ export default {
 
 .popup {
   .popup-overlay {
+    z-index: 1000;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -87,6 +92,7 @@ export default {
     background: rgba($color: #000000, $alpha: 0.5);
   }
   .popup-content {
+    z-index: 2000;
     width: 100%;
     position: fixed;
     height: auto;
@@ -96,9 +102,11 @@ export default {
 
     &.to-top {
       top: 0;
+      left: 0;
     }
     &.to-bottom {
       bottom: 0;
+      left: 0;
     }
     &.to-left {
       width: 50%;

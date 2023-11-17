@@ -47,8 +47,8 @@ export default {
   .btn {
     height: 1rem;
     border: none;
-    font-size: 0.28rem;
-    line-height: 1.02rem;
+    font-size: 16px;
+    line-height: 1;
     text-align: center;
     background-size: contain;
     color: #666;

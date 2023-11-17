@@ -47,12 +47,12 @@ export default {
 
 <style lang="scss" scoped>
 h2 {
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: bolder;
   text-align: center;
 }
 .content {
-  padding: 30px;
+  padding: 15px;
 }
 </style>

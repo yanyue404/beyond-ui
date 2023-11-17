@@ -60,9 +60,9 @@ export default {
 <style lang="scss">
 .demo-tips,
 p {
-  font-size: 24px;
+  font-size: 12px;
 }
 .margin-top {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 </style>

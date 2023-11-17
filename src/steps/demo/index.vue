@@ -43,6 +43,6 @@ export default {
 
 <style lang="scss">
 .display-block {
-  padding: 0 30px;
+  padding: 0 15px;
 }
 </style>

@@ -109,8 +109,8 @@ export default {
 .c-form-step-number {
   display: flex;
   .btn {
-    width: 56px;
-    height: 56px;
+    width: 28px;
+    height: 28px;
     border-radius: 0.04rem;
     border: 1px solid $red;
     position: relative;
@@ -156,9 +156,9 @@ export default {
     }
   }
   .val {
-    min-width: 1.52rem;
-    padding: 0 0.3rem;
-    font-size: 0.28rem;
+    min-width: 30px;
+    padding: 0 3px;
+    font-size: 18px;
     font-family: PingFangSC-Regular, PingFang SC;
     color: #333;
     text-align: center;

@@ -32,16 +32,17 @@ export default {
     // left: 50%;
     // top: 50%;
     background-color: rgba(51, 51, 51, 0.9);
-    padding: 23px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     // transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 28px;
+    font-size: 16px;
     // line-height: 0.48rem;
     z-index: 999;
     max-width: 72vw;
     p {
       text-align: center;
+      font-size: 16px;
     }
   }
 }

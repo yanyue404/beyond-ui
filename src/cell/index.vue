@@ -89,7 +89,7 @@ export default {
 @import '../style/var.scss';
 .cell {
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -100,7 +100,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 90px;
+    min-height: 45px;
     @include cell-border;
   }
   .cell-left {

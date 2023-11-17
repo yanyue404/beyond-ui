@@ -59,8 +59,8 @@ export default {
 .i-icon {
   list-style: none;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   color: $title-color;
   ::v-deep svg {
     vertical-align: top;

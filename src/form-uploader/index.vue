@@ -212,8 +212,8 @@ export default {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      width: 202px;
-      height: 168px;
+      width: 98px;
+      height: 84px;
       border-radius: 10px;
       border: 1px dashed #808080;
       background-color: #f7f8fa;
@@ -240,13 +240,13 @@ export default {
         position: absolute;
         top: 0;
         right: 0;
-        width: 50px;
-        height: 50px;
+        width: 25px;
+        height: 25px;
       }
     }
     .upload-text-center {
       color: #969799;
-      font-size: 24px;
+      font-size: 12px;
     }
     .upload-cover-wrapper {
       z-index: 99;

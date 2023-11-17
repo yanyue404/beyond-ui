@@ -84,15 +84,15 @@ export default {
 .form-input {
   flex: 1;
   align-self: center;
-  height: 0.42rem;
-  line-height: 0.42rem;
+  height: 42px;
+  line-height: 1;
 
   input {
     border: 0;
     color: #333;
     width: 100%;
     background: #fff;
-    font-size: 0.28rem;
+    font-size: 16px;
 
     &[readonly] {
       color: #999;

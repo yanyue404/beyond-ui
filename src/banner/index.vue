@@ -339,8 +339,8 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 110px;
-    width: 110px;
+    height: 55px;
+    width: 55px;
     background: rgba(102, 102, 102, 0.5);
     border: 1px solid #ffffff;
     border-radius: 100%;
@@ -352,25 +352,25 @@ export default {
       stroke-width: 20;
     }
     svg {
-      height: 44px;
-      width: 44px;
+      height: 22px;
+      width: 22px;
     }
   }
   .icon-center-bottom {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     // background: url(./img/close-icon.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    bottom: 50px;
+    bottom: 25px;
     left: 50%;
     transform: translate(-50%, 0);
   }
   .icon-right-top {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     // background: url(./img/video_close.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;

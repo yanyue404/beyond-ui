@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 ::v-deep {
   .btn {
-    font-size: 48px !important;
+    font-size: 18px !important;
   }
 }
 </style>

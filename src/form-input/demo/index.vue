@@ -79,17 +79,17 @@ export default {
 </script>
 <style lang="scss" scoped>
 .c-form-row {
-  padding: 25px 30px;
+  padding: 12px;
   background: #fff;
   border-radius: 0.1rem;
 }
 label {
-  padding-left: 30px;
+  padding-left: 15px;
 }
 label:not(.form-input) {
   width: 161px;
-  font-size: 28px;
-  padding-right: 22px;
+  font-size: 16px;
+  padding-right: 11px;
   text-align: right;
   position: relative;
   &::after {
@@ -100,7 +100,7 @@ label:not(.form-input) {
     bottom: 0;
     margin: auto;
     width: 2px;
-    height: 30px;
+    height: 15px;
     background-color: #ccc;
   }
 }

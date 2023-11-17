@@ -116,8 +116,8 @@ export default {
 
 .dialog-content {
   background-color: #fff;
-  border-radius: 8px;
-  padding: 30px 20px;
+  border-radius: 5px;
+  padding: 7px 10px;
   word-break: break-all;
   width: 70%;
 }
@@ -127,7 +127,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
 }
 
 .dialog-title {
@@ -140,8 +140,8 @@ export default {
 .dialog-close {
   cursor: pointer;
   img {
-    width: 36px;
-    height: 36px;
+    width: 18px;
+    height: 18px;
   }
 }
 

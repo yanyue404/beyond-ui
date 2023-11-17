@@ -6,10 +6,17 @@ module.exports = {
     pxtorem({
       propList: ['*'],
       rootValue({ file }) {
-        if (file && file.indexOf('src') !== -1) {
-          return 33.33333;
-        }
         return 16;
+      },
+      exclude: (e) => {
+        // 不对 beyond-ui/src 的文件进行px转rem，其他文件转换
+        if (/beyond-ui(\\|\/)src(\\|\/)/.test(e)) {
+          console.log(e, false);
+          return true;
+        } else {
+          console.log(e, true);
+          return false;
+        }
       },
     }),
   ],

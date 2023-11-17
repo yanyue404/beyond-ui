@@ -24,9 +24,9 @@ export default {
 
 <style lang="scss" scoped>
 .c-form-row {
-  padding-left: 30px;
+  padding-left: 15px;
   .row {
-    min-height: 90px;
+    min-height: 40px;
     flex-wrap: wrap;
     border-bottom: 1px solid #e7e7e7;
     padding-right: 30px;
@@ -35,13 +35,13 @@ export default {
       border-bottom-color: transparent;
     }
     label {
-      height: 36px;
-      width: 208px;
-      font-size: 28px;
+      height: 18px;
+      width: 50%;
+      font-size: 16px;
       font-family: PingFangSC-Regular, PingFang SC;
       font-weight: 400;
       color: rgba(51, 51, 51, 1);
-      line-height: 36px;
+      line-height: 18px;
     }
   }
 }

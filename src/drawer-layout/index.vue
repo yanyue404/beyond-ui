@@ -375,17 +375,16 @@ export default {
   .header {
     display: flex;
     align-items: center;
-    padding: 0 40px;
-    height: 100px;
+    padding: 0 20px;
+    height: 50px;
     border-bottom: 1px solid #e7e7e7;
     h3 {
       flex: 1;
-      font-size: 32px;
+      font-size: 16px;
       font-family: PingFangSC-Medium, PingFang SC;
       font-weight: 600;
       color: #333;
       text-align: center;
-      width: 542px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -394,15 +393,15 @@ export default {
     .c-break {
       // background: url("./img/break.png") no-repeat center;
       background-size: 100% 100%;
-      width: 44px;
+      width: 22px;
       height: 44px;
     }
 
     .c-close {
       // background: url("./img/close.png") no-repeat center;
       background-size: 100% 100%;
-      width: 44px;
-      height: 44px;
+      width: 22px;
+      height: 22px;
     }
   }
 

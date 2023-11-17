@@ -38,6 +38,7 @@ $border-radius-lg: 8px;
 $border-radius-max: 999px;
 
 // Font
+$font-size-base: 16px;
 $font-size-xs: 10px;
 $font-size-sm: 12px;
 $font-size-md: 14px;
@@ -94,4 +95,74 @@ $dark-color: #dadada;
   );
   background-size: 100% 1px;
   background-repeat: no-repeat;
+}
+
+// Notify
+$notify-text-color: #fff;
+$notify-padding: 8px 16px;
+$notify-font-size: $font-size-base;
+$notify-line-height: 20px;
+$notify-primary-background-color: #1989fa;
+$notify-success-background-color: #07c160;
+$notify-danger-background-color: #ee0a24;
+$notify-warning-background-color: #ff6600;
+
+// IOS底部安全距离兼容
+// 兼容通过padding-bottom设置，
+// 当指定height且box-sizing不为content-box时计算高度
+// $height: 高度
+// $paddingBottom: 底部padding
+// $boxSizing: 盒模型,默认content-box
+@mixin safe-area-bottom(
+  $height: 0,
+  $paddingBottom: 0,
+  $boxSizing: content-box
+) {
+  //底部安全距离
+  $safeArea: 0;
+  //兼容 IOS<11.2
+  @supports (bottom: constant(safe-area-inset-bottom)) {
+    $safeArea: constant(safe-area-inset-bottom);
+  }
+  //兼容 IOS>11.2
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    $safeArea: env(safe-area-inset-bottom);
+  }
+  //存在安全距离常量
+  @if $safeArea {
+    //0不能参与calc计算
+    @if $paddingBottom != 0 {
+      padding-bottom: calc(#{$paddingBottom} + #{$safeArea});
+    } @else {
+      padding-bottom: $safeArea;
+    }
+    box-sizing: $boxSizing;
+    @if $height != 0 {
+      height: $height;
+      //box-sing为content-box时不用计算高度
+      @if $boxSizing != content-box {
+        height: calc(#{$height} + #{$safeArea});
+      }
+    }
+  }
+}
+
+// 反色
+.gray-filter {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+// 1px 像素
+
+@mixin hairline($color: #eee) {
+  border: 1px solid $color;
+}
+
+@mixin hairline-top($color: #eee) {
+  border-top: 1px solid $color;
+}
+
+@mixin hairline-bottom($color: #eee) {
+  border-bottom: 1px solid $color;
 }

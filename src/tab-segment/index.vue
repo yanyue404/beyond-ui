@@ -140,19 +140,19 @@ export default {
 <style lang="scss" scoped>
 .result-main {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 15px;
   position: relative;
 }
 .whiteplace {
   width: 100%;
-  height: 80px;
+  height: 40px;
 }
 .result-nav {
   position: relative;
   display: flex;
   width: 100%;
-  font-size: 28px;
-  height: 80px;
+  font-size: 16px;
+  height: 40px;
   border-bottom: 1px solid #e7e7e7;
   background: #fff;
   font-weight: 500;
@@ -165,7 +165,7 @@ export default {
     bottom: 0;
     display: block;
     width: 100%;
-    height: 6px;
+    height: 3px;
     box-sizing: border-box;
   }
 
@@ -173,12 +173,11 @@ export default {
     position: absolute;
     top: 0;
     background: #ff6600;
-    width: 132px;
-    height: 6px;
-    border-radius: 4px;
+    width: 20vw;
+    height: 3px;
+    border-radius: 2px;
     display: inline-block;
-    -webkti-box-shadow: 0rem 0.3rem 0.8rem rgba(255, 102, 0, 0.35);
-    box-shadow: 0rem 0.3rem 0.8rem rgba(255, 102, 0, 0.35);
+    box-shadow: 0 1.5px 4px rgba(255, 102, 0, 0.35);
     transition: left 0.5s ease 0s;
     transform: translate(-50%, 0);
   }
@@ -200,7 +199,7 @@ export default {
   left: 0;
   top: 0;
   right: 0;
-  width: 750px;
+  width: 100vw;
   margin: 0 auto;
   z-index: 20;
 }
