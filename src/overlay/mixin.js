@@ -72,13 +72,24 @@ export default {
       // document.body.style.overflow = '';
     },
     scrollHander(e) {
+      // 找到弹窗滚动元素
       const getNeed = (el) => {
         if (el == this.$el || !el || !el.parentElement) {
           return false;
         }
+        // 按元素类名
         if (el.className.indexOf('mask-content-needscroll') >= 0) {
           return true;
         }
+
+        if (el && el.tagName !== 'HTML' && el.nodeType === 1) {
+          const { overflowY } = window.getComputedStyle(el);
+
+          if (/scroll|auto/i.test(overflowY)) {
+            return true;
+          }
+        }
+
         return getNeed(el.parentElement);
       };
       if (this.noScrollingPage && this.show && !getNeed(e.target)) {

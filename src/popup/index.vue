@@ -1,9 +1,12 @@
 <template>
   <div class="popup">
     <!-- 蒙层 -->
-    <transition v-if="overlay" name="fade">
-      <div class="popup-overlay" @click="clickMask" v-show="show"></div>
-    </transition>
+    <Overlay
+      ref="overlayRef"
+      v-if="overlay"
+      :show="show"
+      @click="clickMask"
+    ></Overlay>
     <!-- 弹出层 -->
     <transition :name="slideTransitionName">
       <div class="popup-content" :class="'to-' + position" v-show="show">
@@ -44,17 +47,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-// fade 进入过渡生效和离开过渡生效
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-// fade 进入过渡开始，fade 离开过渡的结束状态
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
 // 从下到上的
 .slide_bottom-enter,
 .slide_bottom-leave-active {
@@ -80,17 +72,6 @@ export default {
 }
 
 .popup {
-  .popup-overlay {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba($color: #000000, $alpha: 0.5);
-  }
   .popup-content {
     z-index: 2000;
     width: 100%;

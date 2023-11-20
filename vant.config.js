@@ -137,6 +137,14 @@ module.exports = {
             path: 'circleprogress',
             title: 'circleprogress 圆形进度条',
           },
+          {
+            path: 'video',
+            title: 'Video 视频',
+          },
+          {
+            path: 'actionsheet',
+            title: 'Actionsheet 动作面板',
+          },
         ],
       },
       {

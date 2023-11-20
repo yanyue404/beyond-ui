@@ -16,6 +16,16 @@ $orange-dark: #ed6a0c;
 $orange-light: #fffbe8;
 $green: #07c160;
 
+// ---- nut color ----
+$primary-color: #f0250f !default;
+$normal-color: #848484 !default;
+$link-color: $primary-color !default;
+$link-hover-color: mix($link-color, #000, 80%) !default;
+$title-color: #2d2d2d !default;
+$text-color: #848484 !default;
+$light-color: #f6f6f6 !default;
+$dark-color: #dadada !default;
+
 // Gradient Colors
 $gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
 $gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
@@ -166,3 +176,5 @@ $notify-warning-background-color: #ff6600;
 @mixin hairline-bottom($color: #eee) {
   border-bottom: 1px solid $color;
 }
+
+$zindex-actionsheet: 10001 !default;

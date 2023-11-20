@@ -11,10 +11,8 @@ module.exports = {
       exclude: (e) => {
         // 不对 beyond-ui/src 的文件进行px转rem，其他文件转换
         if (/beyond-ui(\\|\/)src(\\|\/)/.test(e)) {
-          console.log(e, false);
           return true;
         } else {
-          console.log(e, true);
           return false;
         }
       },
