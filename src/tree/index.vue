@@ -20,7 +20,7 @@ export default {
     data: {
       type: Array,
       default() {
-        return [];
+        return []; // 包含了当前节点的所有信息，比如是否展开子节点（expand）、是否选中（checked）、子节点数据（children）等。
       },
     },
     showCheckbox: {
@@ -43,6 +43,7 @@ export default {
   },
   methods: {
     rebuildData() {
+      // 不破坏使用者传递的源数据 data，所以会克隆一份数据（cloneData）
       this.cloneData = deepCopy(this.data);
     },
   },

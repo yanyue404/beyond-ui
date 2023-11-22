@@ -145,6 +145,10 @@ module.exports = {
             path: 'actionsheet',
             title: 'Actionsheet 动作面板',
           },
+          {
+            path: 'tree',
+            title: 'tree 树形控件',
+          },
         ],
       },
       {

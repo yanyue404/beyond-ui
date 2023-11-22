@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// https://www.svgrepo.com/collection/arrow-icon-set/
 export default {
   name: 'i-icon',
   props: {
@@ -36,6 +37,14 @@ export default {
   watch: {
     url(val) {
       this.icon = val;
+    },
+    type(val) {
+      // 配合 raw-loader 可以动态加载 svg 图像而不使用任何包装器
+      try {
+        this.icon = require('../../assets/svg/' + val + '.svg');
+      } catch (error) {
+        console.error(`icon 组件 type 值 (${val}) 有误，无此 icon ！`);
+      }
     },
   },
   created() {
