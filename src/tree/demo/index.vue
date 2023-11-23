@@ -3,6 +3,9 @@
     <demo-block title="基础用法">
       <Tree :data="data"></Tree>
     </demo-block>
+    <demo-block title="选择框用法">
+      <Tree :data="data" :showCheckbox="true"></Tree>
+    </demo-block>
   </demo-section>
 </template>
 

@@ -1,10 +1,16 @@
 <template>
   <div class="c-form-base-checkox" @click="checkFn">
-    <slot></slot>
-    <i :class="[checkedClass]" />
-    <template v-if="$slots.checked">
-      <slot :checked="checked"></slot>
-    </template>
+    <div class="checkbox__icon">
+      <slot name="icon" :checked="checked">
+        <i :class="[checkedClass]" />
+      </slot>
+    </div>
+
+    <div
+      :class="['checkbox__label', disabled ? 'checkbox__label--disabled' : '']"
+    >
+      <slot></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -42,17 +48,36 @@ export default {
 .c-form-base-checkox {
   display: inline-flex;
 }
-.form-checkbox {
-  margin: 0 5px;
+.checkbox__icon {
   width: 18px;
   height: 18px;
+  cursor: pointer;
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+.checkbox__label {
+  margin-left: 8px;
+  color: #323233;
+  line-height: 20px;
+  &--disabled {
+    cursor: not-allowed;
+    color: #c8c9cc;
+  }
+}
+.form-checkbox {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   background-image: url('../icon/uncheck.png');
   background-size: cover;
   &--checked {
     background-image: url('../icon/check.png');
   }
   &--disabled {
-    background-image: url('../icon/cant-check.png') !important;
+    // background-image: url('../icon/uncheck.png') !important;
+    cursor: not-allowed;
   }
 }
 </style>

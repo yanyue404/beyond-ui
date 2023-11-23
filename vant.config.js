@@ -92,6 +92,10 @@ module.exports = {
           //   path: 'form-radio-group',
           //   title: 'form-radio-group 单选包裹',
           // },
+          {
+            path: 'tree',
+            title: 'tree 树形控件',
+          },
         ],
       },
       {
@@ -144,10 +148,6 @@ module.exports = {
           {
             path: 'actionsheet',
             title: 'Actionsheet 动作面板',
-          },
-          {
-            path: 'tree',
-            title: 'tree 树形控件',
           },
         ],
       },

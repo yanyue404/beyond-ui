@@ -42,6 +42,9 @@ export default {
     },
   },
   methods: {
+    emitEvent(eventName, data) {
+      this.$emit(eventName, data, this.cloneData);
+    },
     rebuildData() {
       // 不破坏使用者传递的源数据 data，所以会克隆一份数据（cloneData）
       this.cloneData = deepCopy(this.data);
