@@ -105,13 +105,19 @@ export function mount(component, opt, el) {
 }
 
 // 使用 Vue.extend 的方式可以更好复用实例，从实例修改 props
-export function mountComponent(component, option) {
+export function mountComponent(component, option, apply) {
   const root = document.createElement('div');
   const getInstance = () => {
-    const constructor = Vue.extend(component);
-    return new constructor({ el: root, ...option });
+    const CreateConstructor = Vue.extend(component);
+    // * option.data（Function） 修改 data
+    // * option.propsData（Object） 修改 props
+    // * option.methods (Object) 修改 methods
+    return new CreateConstructor({ el: root, ...option });
   };
   const instance = getInstance();
+  // 可以直接扩展实例，或按返回值自行扩展
+  //eg: instance.$on （承接组件内部的 $emit）、instance.$slots (自定义插槽的内容)
+  apply(instance);
   // 添加节点
   document.body.appendChild(root);
   return {
