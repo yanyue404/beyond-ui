@@ -168,3 +168,16 @@ export function findComponentUpward(context, componentName) {
   }
   return parent;
 }
+
+export function callWithErrorHandling(fn, handleError) {
+  try {
+    fn && fn();
+  } catch (e) {
+    // 将捕获到的错误传递给用户的错误处理程序
+    if (handleError && typeof handleError === 'function') {
+      handleError(e);
+    } else {
+      console.error(e);
+    }
+  }
+}
