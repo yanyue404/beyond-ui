@@ -96,6 +96,10 @@ module.exports = {
             path: 'tree',
             title: 'tree 树形控件',
           },
+          {
+            path: 'table',
+            title: 'table 表单',
+          },
         ],
       },
       {
