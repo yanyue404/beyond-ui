@@ -16,7 +16,9 @@ export default {
     },
     // 自定义 vite 配置
     configureVite(config) {
-      config.server.port = 3000;
+      if (config.server) {
+        config.server.port = 3000;
+      }
       const { BUILD_TARGET } = process.env;
 
       if (BUILD_TARGET === 'package') {

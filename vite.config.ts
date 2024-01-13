@@ -10,10 +10,11 @@ module.exports = {
   },
   build: {
     rollupOptions: {
-      external: ['vue'],
+      // * 打包 文档站点的时候不支持 external vue
+      // external: ['vue'],
       output: {
         globals: {
-          vue: 'Vue',
+          // vue: 'Vue',
         },
       },
     },

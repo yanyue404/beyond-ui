@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, computed, useSlots, defineExpose } from 'vue';
+import { ref, computed, useSlots } from 'vue';
 
 // 定义组件名称
 defineOptions({
