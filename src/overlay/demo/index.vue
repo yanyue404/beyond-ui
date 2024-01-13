@@ -1,8 +1,8 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <i-button @click="show = true">打开遮罩层</i-button>
-      <Overlay :show="show" @click="show = false">
+      <i-button type="primary" @click="show = true">打开遮罩层</i-button>
+      <Overlay v-model:show="show" @click="clickFn($event)">
         <div class="wrapper">
           <div class="block"></div>
         </div>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import '../../button';
 import Overlay from '../index.vue';
 export default {
   components: {
@@ -21,6 +22,14 @@ export default {
     return {
       show: false,
     };
+  },
+  methods: {
+    clickFn(e) {
+      // 仅点击遮罩才关闭
+      if (e.target.className !== 'block') {
+        this.show = false;
+      }
+    },
   },
 };
 </script>

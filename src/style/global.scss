@@ -149,3 +149,11 @@ li {
   align-items: center;
 }
 
+.van-doc-demo-section {
+  .van-doc-demo-block {
+    padding: 0 10px;
+    h2 {
+      padding-left: 0;
+    }
+  }
+}

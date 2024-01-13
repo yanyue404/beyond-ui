@@ -1,11 +1,14 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <form-switch
-        :list="list"
-        :value="renewalType == 'Y'"
-        @switchChange="renewalChange"
-      ></form-switch>
+      <div class="demo">
+        <span>是否开启</span>
+        <form-switch
+          :list="list"
+          :value="openState == 'Y'"
+          @switchChange="onChange"
+        ></form-switch>
+      </div>
     </demo-block>
   </demo-section>
 </template>
@@ -21,17 +24,23 @@ export default {
         { val: 'Y', name: '开' },
         { val: 'N', name: '关' },
       ],
-      renewalType: 'Y',
+      openState: 'Y',
     };
   },
   methods: {
-    renewalChange(name, val) {
-      this.renewalType === 'Y'
-        ? (this.renewalType = 'N')
-        : (this.renewalType = 'Y');
+    onChange() {
+      this.openState === 'Y' ? (this.openState = 'N') : (this.openState = 'Y');
     },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.demo {
+  display: flex;
+  span {
+    margin-right: 20px;
+    line-height: 2;
+  }
+}
+</style>

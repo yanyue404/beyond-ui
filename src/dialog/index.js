@@ -8,8 +8,9 @@ function Dialog(options) {
     if (!instance) {
       ({ instance, unmount } = mountComponent(
         DialogCom,
+        // ! 追加 props
         Object.assign(Dialog.defaultOptions, options, {
-          'onUpdate:show': () => {
+          'onUpdate:show': (flag) => {
             unmount();
             instance = null;
           },

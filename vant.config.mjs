@@ -2,15 +2,39 @@ export default {
   name: 'beyond-ui',
   build: {
     css: {
+      // 全局样式文件的路径，可以为相对路径或绝对路径。
+      base: 'style/global.scss',
+      // CSS 预处理器配置
       preprocessor: 'sass',
+      // 是否在构建后移除样式文件的源代码。
+      removeSourceFile: true,
     },
     site: {
-      publicPath: '/beyond-ui/',
+      enableVConsole: true,
+      // 等价于 vite 的 build.outDir 配置
+      publicPath: '/beyond-ui/v3/',
+    },
+    // 自定义 vite 配置
+    configureVite(config) {
+      config.server.port = 3000;
+      const { BUILD_TARGET } = process.env;
+
+      if (BUILD_TARGET === 'package') {
+        // 修改组件库构建配置
+      }
+
+      if (BUILD_TARGET === 'site') {
+        // 修改文档站点构建配置
+      }
+
+      return config;
     },
   },
   site: {
     title: 'beyond-ui',
     logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+    // 描述
+    description: 'vue3 组件库',
     nav: [
       {
         title: '开发指南',

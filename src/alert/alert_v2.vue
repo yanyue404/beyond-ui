@@ -10,20 +10,20 @@
   </div>
 </template>
 <script>
-import { ref } from 'vue';
+let seed = 0;
+
+function getUuid() {
+  return 'alert_' + seed++;
+}
 
 export default {
-  // ! vue3 mountComponent 要操作 instance 实例上的属性方法需要这样暴露，直接 <script setup> 不可以
-  setup(props, ctx) {
-    let seed = 0;
-
-    function getUuid() {
-      return 'alert_' + seed++;
-    }
-
-    const notices = ref([]);
-
-    const add = (notice) => {
+  data() {
+    return {
+      notices: [],
+    };
+  },
+  methods: {
+    add(notice) {
       const name = getUuid();
 
       let _notice = Object.assign(
@@ -33,29 +33,24 @@ export default {
         notice
       );
 
-      notices.value.push(_notice);
+      this.notices.push(_notice);
 
       // 定时移除，单位：秒
-      const duration = _notice.duration;
+      const duration = notice.duration;
       setTimeout(() => {
-        remove(name);
+        this.remove(name);
       }, duration * 1000);
-    };
+    },
+    remove(name) {
+      const notices = this.notices;
 
-    const remove = (name) => {
-      for (let i = 0; i < notices.value.length; i++) {
-        if (notices.value[i].name === name) {
-          notices.value.splice(i, 1);
+      for (let i = 0; i < notices.length; i++) {
+        if (notices[i].name === name) {
+          this.notices.splice(i, 1);
           break;
         }
       }
-    };
-
-    return {
-      notices,
-      add,
-      remove,
-    };
+    },
   },
 };
 </script>

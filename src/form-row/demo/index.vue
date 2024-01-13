@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .c-form-row {
   background: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 input {
   flex: 1;
