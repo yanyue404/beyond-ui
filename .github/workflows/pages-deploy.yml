@@ -1,0 +1,46 @@
+# https://www.ruanyifeng.com/blog/2016/07/yaml.html
+# 手动触发
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+  # 定时任务在utc的9点执行，换算北京时间需要 + 8也就是凌晨五点
+  schedule:
+    - cron: "0 21 * * *"
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["lts/fermium"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: "master"
+          persist-credentials: false
+          fetch-depth: 0
+        env:
+          TZ: Asia/Shanghai
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
+        with:Site
+          node-version: ${{ matrix.node }}
+      - name: npm Install
+        run: npm install
+      - name: Build Site Pages
+        run: npm run build:site
+      - name: Deploy to Pages
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          cd site
+          git init
+          git config user.name "yanyue404"
+          git config user.email "1656800216@qq.com"
+          git add .
+          git commit -m 'deploy: ui docs'
+
+          git push -f https://ACCESS_TOKEN:${{secrets.ACCESS_TOKEN }}@github.com/yanyue404/beyond-ui.git master:gh-pages
+          cd -
