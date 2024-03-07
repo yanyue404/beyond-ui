@@ -36,11 +36,12 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           cd site
+          git config --global init.defaultBranch main
           git init
           git config user.name "yanyue404"
           git config user.email "1656800216@qq.com"
           git add .
           git commit -m 'deploy: ui docs'
 
-          git push -f https://ACCESS_TOKEN:${{secrets.ACCESS_TOKEN }}@github.com/yanyue404/beyond-ui.git master:gh-pages
+          git push -f https://ACCESS_TOKEN:${{secrets.ACCESS_TOKEN }}@github.com/yanyue404/beyond-ui.git main:gh-pages
           cd -
