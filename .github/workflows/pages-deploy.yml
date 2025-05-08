@@ -6,8 +6,8 @@ on:
     branches:
       - master
   # 定时任务在utc的9点执行，换算北京时间需要 + 8也就是凌晨五点
-  schedule:
-    - cron: "0 21 * * *"
+  # schedule:
+  #   - cron: "0 21 * * *"
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
